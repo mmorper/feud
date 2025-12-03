@@ -4,7 +4,7 @@
 
 **Welcome to Virgil Feud** – the browser-based Family Feud experience that turns any corporate gathering into an unforgettable competition.
 
-![Virgil Feud Gameplay](./docs/screenshot.png)
+![Virgil Feud Gameplay](./docs/screenshot.gif)
 *Watch teams race to 500 points with questions tailored to YOUR company*
 
 ---
