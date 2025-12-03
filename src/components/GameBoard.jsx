@@ -216,7 +216,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
 
         {/* Team 2 */}
         <motion.div
-          className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-light-blue' : 'bg-white/10'} backdrop-blur-md`}
+          className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-light-blue border-4 border-white' : 'bg-white/10'} backdrop-blur-md`}
           animate={{ scale: activeTeam === 2 ? 1.05 : 1 }}
         >
           <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-white' : 'text-white'}`}>
