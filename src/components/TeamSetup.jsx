@@ -52,7 +52,7 @@ function TeamSetup({ onSetupComplete, onBack, loading, error }) {
 
         {/* Team 2 */}
         <div className="mb-8">
-          <label className="block text-2xl font-bold text-feud-red mb-3">
+          <label className="block text-2xl font-bold text-feud-light-blue mb-3">
             Team 2 Name
           </label>
           <input
@@ -60,7 +60,7 @@ function TeamSetup({ onSetupComplete, onBack, loading, error }) {
             value={team2Name}
             onChange={(e) => setTeam2Name(e.target.value)}
             placeholder="Enter Team 2 name..."
-            className="w-full p-4 rounded-lg bg-white/20 text-white text-xl border-2 border-feud-red focus:outline-none focus:border-red-400 placeholder-white/50"
+            className="w-full p-4 rounded-lg bg-white/20 text-white text-xl border-2 border-feud-light-blue focus:outline-none focus:border-blue-300 placeholder-white/50"
             maxLength={20}
             required
           />

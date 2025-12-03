@@ -216,13 +216,13 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
 
         {/* Team 2 */}
         <motion.div
-          className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-red' : 'bg-white/10'} backdrop-blur-md`}
+          className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-light-blue' : 'bg-white/10'} backdrop-blur-md`}
           animate={{ scale: activeTeam === 2 ? 1.05 : 1 }}
         >
-          <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-white' : 'text-white'}`}>
+          <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-feud-blue' : 'text-white'}`}>
             {teams.team2}
           </h2>
-          <p className={`text-4xl font-game ${activeTeam === 2 ? 'text-white' : 'text-feud-red'}`}>
+          <p className={`text-4xl font-game ${activeTeam === 2 ? 'text-feud-blue' : 'text-feud-light-blue'}`}>
             {animatedTeam2Score}
           </p>
         </motion.div>
@@ -257,7 +257,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
                 rotateX: { duration: 0.6, ease: "easeInOut" }
               }}
               className={`flex items-center justify-between p-4 rounded-lg ${
-                answer.revealed ? 'bg-feud-gold' : 'bg-blue-900/50'
+                answer.revealed ? 'bg-feud-gold' : 'bg-feud-blue/50'
               } backdrop-blur-md border-2 ${
                 answer.revealed ? 'border-yellow-400' : 'border-white/20'
               }`}

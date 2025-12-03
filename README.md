@@ -71,7 +71,7 @@ npm run preview
 ### Core Gameplay
 - 🎮 **Host-Controlled**: Single host operates the game via keyboard
 - 👥 **Two Team Competition**: Classic game show format
-- 🎯 **3 Regular Rounds**: 3 questions per round, 9 questions total
+- 🎯 **3 Regular Rounds**: 3 questions per round, 9 questions total (Fast Money not yet playable)
 - ⌨️ **Full Keyboard Controls**: Complete host interface with shortcuts
 - 🏆 **Auto-Scoring**: First to 500 points or highest after all rounds
 - 🔄 **Auto-Switch**: Teams automatically switch after 3 strikes
@@ -95,11 +95,17 @@ npm run preview
 ```
 family_feud/
 ├── Game_Questions/          # Markdown files with game questions
-│   └── sample.md           # Sample question format
+│   ├── sample.md           # Sample question format
+│   └── README.md           # Game file format guide
+├── prompts/                # AI prompt system for creating game files
+│   ├── game-file-generator-prompt.md  # Main system prompt
+│   ├── USAGE_GUIDE.md                 # Setup & usage instructions
+│   └── FORMAT_QUICK_REFERENCE.md      # Format cheat sheet
 ├── Requirements/           # Project documentation
 │   ├── todo.md            # Development task list
 │   └── host_controls.md   # Keyboard controls reference
 ├── docs/                  # Documentation assets
+│   ├── QUICKSTART.md      # Quick setup guide
 │   └── screenshot.png     # Game screenshot (add your own)
 ├── src/                   # Source code
 │   ├── components/        # React components
@@ -109,22 +115,45 @@ family_feud/
 │   │   └── GameOver.jsx      # Winner screen
 │   ├── utils/            # Utility functions
 │   │   └── questionParser.js # Markdown parser
+│   ├── hooks/            # Custom React hooks
+│   │   ├── useSounds.js      # Sound effects hook
+│   │   └── useCountUp.js     # Counting animation hook
 │   ├── assets/           # Images, sounds, etc.
 │   ├── App.jsx           # Main app component
 │   ├── main.jsx          # App entry point
 │   └── index.css         # Global styles
 ├── public/               # Static assets
+│   └── sounds/           # Sound effect files (optional)
 ├── index.html           # HTML entry point
 ├── package.json         # Dependencies and scripts
 ├── vite.config.js       # Vite configuration
 ├── tailwind.config.js   # Tailwind CSS configuration
-├── docs/
-│   ├── QUICKSTART.md    # Quick setup guide
-│   └── screenshot.png   # Gameplay screenshot
 └── README.md           # This file
 ```
 
 ## Adding New Questions
+
+### Quick Start: Use the AI Prompt
+
+The easiest way to create new game files is to use our **AI-powered Game File Generator**!
+
+📁 **Location:** `/prompts/game-file-generator-prompt.md`
+
+This system prompt guides you through creating compliant game files step-by-step. It works with:
+- Claude Projects ([claude.ai](https://claude.ai/projects))
+- Custom GPTs (ChatGPT)
+- LibreChat agents
+
+**Features:**
+- ✅ Phase-based workflow (Discovery → Generation → Review → Validation)
+- ✅ Acts as subject matter expert based on your theme
+- ✅ Built-in validation to ensure parser compliance
+- ✅ Good/bad examples and quality checks
+- ✅ Interactive refinement before final generation
+
+See `/prompts/USAGE_GUIDE.md` for complete setup and usage instructions.
+
+### Manual Creation
 
 1. Create a new `.md` file in the `Game_Questions/` folder
 2. Follow the format in `Game_Questions/sample.md`
@@ -142,7 +171,20 @@ family_feud/
 3. Answer 3 - 15
 4. Answer 4 - 7
 5. Answer 5 - 3
+
+[... 2 more questions ...]
+
+## Round 2
+[... 3 questions ...]
+
+## Round 3
+[... 3 questions ...]
+
+## Fast Money Round
+[... 3 questions - REQUIRED but not yet playable ...]
 ```
+
+**⚠️ Important:** Game files must include a Fast Money Round section (3 questions) for the parser to accept them, even though Fast Money gameplay is not yet implemented. The prompt system handles this automatically.
 
 ## Host Controls
 
@@ -233,7 +275,9 @@ To replace the screenshot with your own:
 
 For additional help, refer to:
 - [docs/QUICKSTART.md](docs/QUICKSTART.md) - Quick setup guide
-- [Requirements/todo.md](Requirements/todo.md) - Development history
+- **[prompts/USAGE_GUIDE.md](prompts/USAGE_GUIDE.md) - AI game file generator setup**
+- **[prompts/FORMAT_QUICK_REFERENCE.md](prompts/FORMAT_QUICK_REFERENCE.md) - Format cheat sheet**
 - [Requirements/host_controls.md](Requirements/host_controls.md) - Complete keyboard reference
-- [Game_Questions/README.md](Game_Questions/README.md) - How to create custom games
+- [Game_Questions/README.md](Game_Questions/README.md) - How to create custom games manually
+- [Requirements/todo.md](Requirements/todo.md) - Development history
 - [public/sounds/README.md](public/sounds/README.md) - How to add sound effects

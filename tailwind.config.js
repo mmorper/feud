@@ -7,9 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'feud-blue': '#1e3a8a',
-        'feud-red': '#dc2626',
-        'feud-gold': '#fbbf24',
+        'feud-blue': '#0D3B66',        // Dark navy blue (background) - from UNLEASHED logo
+        'feud-light-blue': '#5DADE2',  // Light blue (accents, team color) - from bear outline
+        'feud-red': '#dc2626',         // Red (strikes) - keeping classic game show red
+        'feud-gold': '#FDB927',        // Bright yellow (UNLEASHED text, answers, buttons)
       },
       fontFamily: {
         'game': ['Arial Black', 'Impact', 'sans-serif'],

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Confetti from './Confetti'
+import virtruLogo from '../assets/imgs/virtru_logo_w.svg'
 
 function GameOver({ teams, scores, onPlayAgain }) {
   const winner = scores.team1 > scores.team2 ? teams.team1 : teams.team2
@@ -70,14 +71,24 @@ function GameOver({ teams, scores, onPlayAgain }) {
         </motion.button>
       </motion.div>
 
-      <motion.p
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="mt-8 text-white/60 text-lg"
+        className="mt-8 text-center"
       >
-        Made by Marketers with Zero Coding Skills
-      </motion.p>
+        <p className="text-white/60 text-lg mb-4">
+          Made by Marketers with Zero Coding Skills
+        </p>
+        <motion.img
+          src={virtruLogo}
+          alt="Virtru"
+          className="mx-auto opacity-85"
+          style={{ width: '90px', height: 'auto' }}
+          whileHover={{ opacity: 1, scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
+      </motion.div>
     </motion.div>
   )
 }

@@ -32,27 +32,36 @@ Press `Ctrl+C` in the terminal where the dev server is running.
 ```
 family_feud/
 ├── Game_Questions/
-│   └── sample.md              # Sample game questions
+│   ├── sample.md                      # Sample game questions
+│   └── README.md                      # Game format guide
+├── prompts/                            # AI game file generator
+│   ├── game-file-generator-prompt.md  # Main system prompt
+│   ├── USAGE_GUIDE.md                 # Setup instructions
+│   └── FORMAT_QUICK_REFERENCE.md      # Format cheat sheet
 ├── Requirements/
-│   ├── todo.md               # Development roadmap
-│   └── host_controls.md      # Keyboard controls
+│   ├── todo.md                        # Development roadmap
+│   └── host_controls.md               # Keyboard controls
 ├── src/
 │   ├── components/
-│   │   ├── MainMenu.jsx      # Main menu screen
-│   │   ├── TeamSetup.jsx     # Team name setup
-│   │   ├── GameBoard.jsx     # Main game board
-│   │   └── GameOver.jsx      # Winner screen
+│   │   ├── MainMenu.jsx               # Main menu screen
+│   │   ├── TeamSetup.jsx              # Team name setup
+│   │   ├── GameBoard.jsx              # Main game board
+│   │   └── GameOver.jsx               # Winner screen
 │   ├── utils/
-│   │   └── questionParser.js # Markdown parser
-│   ├── assets/sounds/        # Sound effects folder
-│   ├── App.jsx              # Main app
-│   ├── main.jsx             # Entry point
-│   └── index.css            # Global styles
-├── package.json             # Dependencies
-├── vite.config.js          # Vite config
-├── tailwind.config.js      # Tailwind config
-├── index.html              # HTML entry
-└── README.md               # Full documentation
+│   │   └── questionParser.js          # Markdown parser
+│   ├── hooks/
+│   │   ├── useSounds.js               # Sound effects hook
+│   │   └── useCountUp.js              # Counting animation hook
+│   ├── assets/                        # Images, sounds, etc.
+│   ├── App.jsx                        # Main app
+│   ├── main.jsx                       # Entry point
+│   └── index.css                      # Global styles
+├── public/sounds/                     # Optional sound files
+├── package.json                       # Dependencies
+├── vite.config.js                     # Vite config
+├── tailwind.config.js                 # Tailwind config
+├── index.html                         # HTML entry
+└── README.md                          # Full documentation
 ```
 
 ## 🎉 Fully Functional & Polished!
@@ -122,12 +131,28 @@ See [../public/sounds/README.md](../public/sounds/README.md) for details.
 
 ## Creating Custom Games
 
+### Option 1: Use the AI Game File Generator (Recommended)
+
+The easiest way to create new game files:
+
+1. Use the system prompt at `prompts/game-file-generator-prompt.md`
+2. Copy it into Claude Projects, Custom GPT, or LibreChat
+3. Tell the AI your theme (e.g., "Christmas", "Sports", "Movies")
+4. The AI guides you through creating a compliant game file
+5. Save the generated file in `Game_Questions/`
+6. Restart the dev server
+
+See [../prompts/USAGE_GUIDE.md](../prompts/USAGE_GUIDE.md) for detailed setup instructions.
+
+### Option 2: Manual Creation
+
 1. Copy `Game_Questions/sample.md` to a new file (e.g., `holiday.md`)
 2. Edit the questions and answers
-3. Restart the dev server
-4. Your new game appears in the dropdown automatically!
+3. **Must include Fast Money Round** (3 questions) - required by parser but not yet playable
+4. Restart the dev server
+5. Your new game appears in the dropdown automatically!
 
-See [../Game_Questions/README.md](../Game_Questions/README.md) for the question format.
+See [../Game_Questions/README.md](../Game_Questions/README.md) for the exact format requirements.
 
 ## Possible Future Enhancements
 

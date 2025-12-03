@@ -60,10 +60,12 @@ Each game file must follow this structure:
 ## Requirements
 
 - **3 Rounds** with exactly **3 questions each**
-- **Fast Money** with exactly **3 questions**
+- **Fast Money** with exactly **3 questions** (REQUIRED but not yet playable in-game)
 - **2-5 answers** per question
 - Each answer must have a **point value** (number)
 - Use the format: `1. Answer Text - Points`
+
+**⚠️ Important:** The game parser requires Fast Money questions in all game files, even though Fast Money gameplay is not yet implemented. Without Fast Money, the file will fail validation.
 
 ## File Naming
 
