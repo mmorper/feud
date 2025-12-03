@@ -309,14 +309,6 @@ family_feud/
 ```
 
 
-## Technologies Used
-
-- **React 18**: UI framework
-- **Vite**: Build tool and dev server
-- **Tailwind CSS**: Utility-first styling
-- **Framer Motion**: Animations
-- **JavaScript (ES6+)**: Programming language
-
 ## Troubleshooting
 
 ### Port Already in Use
