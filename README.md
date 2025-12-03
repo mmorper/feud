@@ -63,21 +63,95 @@ One person controls everything via keyboard shortcuts. No clicking, no lag, no "
 
 ---
 
-## Quick Start (Seriously, It's Easy)
+## Quick Start (For Marketers Who've Never Done This Before)
 
-**Step 1: Get Node.js**
-Already have it? Skip to Step 2. Don't have it? [Download Node.js LTS](https://nodejs.org/) (the green button), install, done.
+### Step 0: Get This Project on Your Computer
 
-**Step 2: Fire It Up**
+**On this GitHub page**, look for the green `<> Code` button near the top. Click it, then click **"Download ZIP"**.
+
+Unzip the file somewhere you can find it (like your Desktop or Documents folder).
+
+### Step 1: Install Node.js (One-Time Thing)
+
+**What's Node.js?** It's what makes this game run on your computer. Think of it like installing Microsoft Office, except free and way less annoying.
+
+1. Go to [nodejs.org](https://nodejs.org/)
+2. Click the green button that says **"LTS"** (it'll have a version number)
+3. Install it like any other program
+4. You're done. Seriously, that's it.
+
+**How do I know it worked?** Don't worry about it. If Step 2 works, you're good.
+
+### Step 2: Open the Scary Black Box (It's Not Scary)
+
+**On Mac:**
+- Open **Terminal** (press `Cmd + Space`, type "terminal", hit Enter)
+
+**On Windows:**
+- Open **Command Prompt** (press `Windows Key`, type "cmd", hit Enter)
+
+You'll see a black (or white) box with text. This is your terminal. You're a developer now. Congratulations.
+
+### Step 3: Navigate to Your Project
+
+Type this, but replace `path/to/your/folder` with where you actually unzipped the project:
+
+**Mac/Linux:**
 ```bash
-npm install   # First time only - installs dependencies
-npm run dev   # Starts the game
+cd ~/Desktop/family_feud
 ```
 
-**Step 3: Play**
-Open your browser to `http://localhost:5173`, pick a game file, enter team names, and press `1-5` to reveal answers. That's it.
+**Windows:**
+```bash
+cd C:\Users\YourName\Desktop\family_feud
+```
 
-**Want to deploy it?** Run `npm run build` and host the `dist/` folder anywhere. GitHub Pages, your company intranet, wherever.
+**Pro tip:** You can drag the folder into the terminal window and it'll type the path for you. Magic.
+
+Press **Enter**. If nothing breaks, you did it right.
+
+### Step 4: Install the Game's Dependencies
+
+Copy this, paste it in your terminal, press Enter:
+
+```bash
+npm install
+```
+
+You'll see a bunch of text fly by. That's normal. It's downloading stuff. Takes 1-2 minutes.
+
+**When it stops and you see your terminal prompt again, you're ready.**
+
+### Step 5: Start the Game
+
+Type this and press Enter:
+
+```bash
+npm run dev
+```
+
+You'll see something like:
+```
+Local: http://localhost:5173
+```
+
+**Copy that URL** (it might be a different number) and paste it into your web browser.
+
+### Step 6: Play!
+
+The game loads in your browser. Pick a game file from the dropdown, enter team names, and press `1-5` on your keyboard to reveal answers.
+
+**To stop the game:** Go back to that terminal window and press `Ctrl + C`.
+
+---
+
+### "I Messed Something Up"
+
+No worries. Close the terminal, open a new one, and start from Step 3.
+
+### "I Want to Share This With My Team"
+
+See the "Building for Production" section below. Or just send them this GitHub repo and tell them to follow these steps.
 
 ---
 
