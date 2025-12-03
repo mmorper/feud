@@ -194,13 +194,13 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
       <div className="flex justify-between items-center mb-8">
         {/* Team 1 */}
         <motion.div
-          className={`p-6 rounded-lg ${activeTeam === 1 ? 'bg-feud-gold' : 'bg-white/10'} backdrop-blur-md`}
+          className={`p-6 rounded-lg ${activeTeam === 1 ? 'bg-feud-gold' : 'bg-feud-light-blue'} backdrop-blur-md`}
           animate={{ scale: activeTeam === 1 ? 1.05 : 1 }}
         >
           <h2 className={`text-2xl font-bold ${activeTeam === 1 ? 'text-feud-blue' : 'text-white'}`}>
             {teams.team1}
           </h2>
-          <p className={`text-4xl font-game ${activeTeam === 1 ? 'text-feud-blue' : 'text-feud-gold'}`}>
+          <p className={`text-4xl font-game ${activeTeam === 1 ? 'text-feud-blue' : 'text-white'}`}>
             {animatedTeam1Score}
           </p>
         </motion.div>
@@ -216,13 +216,13 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
 
         {/* Team 2 */}
         <motion.div
-          className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-light-blue border-4 border-white' : 'bg-white/10'} backdrop-blur-md`}
+          className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-gold' : 'bg-feud-light-blue'} backdrop-blur-md`}
           animate={{ scale: activeTeam === 2 ? 1.05 : 1 }}
         >
-          <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-white' : 'text-white'}`}>
+          <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-feud-blue' : 'text-white'}`}>
             {teams.team2}
           </h2>
-          <p className={`text-4xl font-game ${activeTeam === 2 ? 'text-white' : 'text-feud-light-blue'}`}>
+          <p className={`text-4xl font-game ${activeTeam === 2 ? 'text-feud-blue' : 'text-white'}`}>
             {animatedTeam2Score}
           </p>
         </motion.div>
