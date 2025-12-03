@@ -42,11 +42,13 @@ One person controls everything via keyboard shortcuts. No clicking, no lag, no "
 - Animated answer reveals and confetti celebrations
 - Winner screen with your company branding
 
-✅ **Modern Tech Stack** (Built by Marketers, Seriously)
-- React 18 + Vite for instant performance
-- Tailwind CSS for sleek animations
-- Runs entirely in the browser – no backend needed
-- One command to start: `npm run dev`
+✅ **Modern Tech Stack** (Yes, Marketers Built This)
+- **React 18 + Vite** – We Googled what these were. Turns out they're fast.
+- **Tailwind CSS** – Finally, a way to style things without crying.
+- **Framer Motion** – Makes things go *whoosh* when they shouldn't.
+- **On GitHub** – We learned what a pull request is. Our developer friends are confused.
+- **No backend** – Because we definitely couldn't build one.
+- **One command to start**: `npm run dev` – We memorized this. It's basically our superpower now.
 
 ✅ **AI-Powered Content Creation**
 - System prompts for Claude Projects & Custom GPTs
@@ -265,46 +267,6 @@ If you see "Port 5173 is already in use":
 ## License
 
 This project is for educational and entertainment purposes.
-
-## Current Status
-
-**✅ FULLY FUNCTIONAL & PRODUCTION-READY!**
-
-The game is complete and polished with all planned features implemented!
-
-**Core Features:**
-- ✅ Main menu with multiple game file selection
-- ✅ Team setup and name entry
-- ✅ Complete game board with all controls
-- ✅ Answer reveal system with vertical flip animations
-- ✅ Strike system with shake animations (auto-switches at 3 strikes)
-- ✅ Point banking and stealing mechanics
-- ✅ Smooth counting animations for all scores
-- ✅ Round progression through all 3 rounds
-- ✅ Win condition checking (500 points or end of rounds)
-- ✅ Winner screen with confetti effects
-- ✅ Sound effects system (graceful fallback if files missing)
-- ✅ ESC key to toggle host controls overlay
-- ✅ Multiple game file support (auto-detects all .md files)
-- ✅ Complete game flow from menu to winner
-
-**Possible Future Enhancements:**
-- Face-off buzzer system for question starts
-- Fast Money bonus round
-- Additional sound effects and music
-- More elaborate animations
-- Mobile/tablet optimization
-
-See [Requirements/todo.md](Requirements/todo.md) for development history.
-
-## Adding Your Own Screenshot
-
-To replace the screenshot with your own:
-
-1. Run `npm run dev` and navigate to the game board
-2. Take a screenshot (Cmd+Shift+4 on Mac, Win+Shift+S on Windows)
-3. Save as `screenshot.png` in the `docs/` folder (overwrites existing)
-4. The README will automatically display your new screenshot!
 
 ## Support & Documentation
 
