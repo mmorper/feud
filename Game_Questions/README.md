@@ -31,19 +31,25 @@ Each game file must follow this structure:
 ### Question 3
 ...
 
+### Question 4
+...
+
+### Question 5
+...
+
 ## Round 2
 
 ### Question 1
 ...
 
-(3 questions for Round 2)
+(5 questions for Round 2)
 
 ## Round 3
 
 ### Question 1
 ...
 
-(3 questions for Round 3)
+(5 questions for Round 3)
 
 ## Fast Money Round
 
@@ -59,7 +65,7 @@ Each game file must follow this structure:
 
 ## Requirements
 
-- **3 Rounds** with exactly **3 questions each**
+- **3 Rounds** with **4-5 questions each** (3 questions supported for backwards compatibility)
 - **Fast Money** with exactly **3 questions** (REQUIRED but not yet playable in-game)
 - **2-5 answers** per question
 - Each answer must have a **point value** (number)
@@ -81,8 +87,9 @@ Use hyphens (`-`) or underscores (`_`) to separate words.
 1. **Survey-style questions**: Ask "Name something..." or "What do people..."
 2. **Point distribution**: Top answer should be ~40-50, lowest ~3-5
 3. **Total points**: Aim for ~100 points per question
-4. **Variety**: Mix easy and challenging questions
-5. **Family-friendly**: Keep content appropriate for all ages
+4. **Question count**: Use 4-5 questions per round for better gameplay (ensures games reach 500 points)
+5. **Variety**: Mix easy and challenging questions
+6. **Family-friendly**: Keep content appropriate for all ages
 
 ## Example Question Types
 

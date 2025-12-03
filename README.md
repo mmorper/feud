@@ -212,7 +212,7 @@ Create a markdown file in `Game_Questions/` like this:
 5. Quantum Computing - 7
 ```
 
-Repeat for 3 rounds (3 questions each) + Fast Money (3 questions). Save it, restart the server, and boom – new game.
+Repeat for 3 rounds (4-5 questions each recommended, 3 questions supported for legacy files) + Fast Money (3 questions). Save it, restart the server, and boom – new game.
 
 Format details: [Game_Questions/README.md](Game_Questions/README.md)
 
@@ -250,7 +250,7 @@ Host the `dist/` folder on GitHub Pages, Netlify, Vercel, or your company's inte
 ### Core Gameplay
 - 🎮 **Host-Controlled**: Single host operates the game via keyboard
 - 👥 **Two Team Competition**: Classic game show format
-- 🎯 **3 Regular Rounds**: 3 questions per round, 9 questions total (Fast Money not yet playable)
+- 🎯 **3 Regular Rounds**: 4-5 questions per round, 12-15 questions total (Fast Money not yet playable)
 - ⌨️ **Full Keyboard Controls**: Complete host interface with shortcuts
 - 🏆 **Auto-Scoring**: First to 500 points or highest after all rounds
 - 🔄 **Auto-Switch**: Teams automatically switch after 3 strikes

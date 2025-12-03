@@ -169,10 +169,10 @@ export function validateGame(game) {
     errors.push('Game must have exactly 3 rounds')
   }
 
-  // Check each round has 3 questions
+  // Check each round has 3-5 questions (3 for backwards compatibility, 4-5 recommended)
   game.rounds?.forEach((round, idx) => {
-    if (!round.questions || round.questions.length !== 3) {
-      errors.push(`Round ${idx + 1} must have exactly 3 questions`)
+    if (!round.questions || round.questions.length < 3 || round.questions.length > 5) {
+      errors.push(`Round ${idx + 1} must have 3-5 questions (4-5 recommended for better gameplay)`)
     }
 
     // Check each question has 2-5 answers

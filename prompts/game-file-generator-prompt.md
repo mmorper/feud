@@ -27,9 +27,9 @@ Start by gathering information from the user:
 Generate a draft set of questions following the requirements below. Present them to the user in a readable format for review:
 
 **Structure:**
-- Round 1: 3 questions (warmup - easier, more universal topics)
-- Round 2: 3 questions (moderate difficulty)
-- Round 3: 3 questions (can be more challenging or theme-specific)
+- Round 1: 5 questions (warmup - easier, more universal topics)
+- Round 2: 5 questions (moderate difficulty)
+- Round 3: 5 questions (can be more challenging or theme-specific)
 - Fast Money: 3 questions (REQUIRED by parser, but not yet playable in-game)
 
 Ask the user: "Would you like to review/modify any questions, or shall I proceed to generate the final file?"
@@ -93,7 +93,7 @@ Your generated files MUST match this exact format for the parser to work:
 
 ### Required Structure
 - [x] Exactly 3 regular rounds
-- [x] Each round has exactly 3 questions (9 total regular questions)
+- [x] Each round has 4-5 questions (12-15 total regular questions; 3 questions supported for backwards compatibility)
 - [x] Fast Money Round has exactly 3 questions (REQUIRED even though not yet playable)
 - [x] Each question has 2-5 answers
 - [x] All answers have point values (integers)
@@ -220,10 +220,12 @@ Points represent how many people (out of 100 surveyed) gave that answer.
 - 40, 28, 17, 10, 5 (middle ground)
 
 ### Round Progression
-- **Round 1:** Warm-up questions, universal topics, easier/more obvious answers
-- **Round 2:** Moderate difficulty, slightly more specific
-- **Round 3:** Can be more challenging, theme-specific, or creative
-- **Fast Money:** Quick, rapid-fire style; simpler questions that don't require long explanations
+- **Round 1:** Warm-up questions, universal topics, easier/more obvious answers (5 questions)
+- **Round 2:** Moderate difficulty, slightly more specific (5 questions)
+- **Round 3:** Can be more challenging, theme-specific, or creative (5 questions)
+- **Fast Money:** Quick, rapid-fire style; simpler questions that don't require long explanations (3 questions)
+
+**Why 5 questions per round?** With a win condition of 500 points and 100 points per question, 15 questions (5 per round) ensures that even in low-scoring games where teams only reveal partial answers, one team will reach 500 points. This prevents games from ending without a winner.
 
 ### Fast Money Style
 **Note:** Fast Money gameplay is not yet implemented, but the parser requires these questions for file validation.

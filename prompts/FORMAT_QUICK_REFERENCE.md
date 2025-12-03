@@ -9,12 +9,14 @@ Fast reference for creating compliant game markdown files.
 | Component | Requirement |
 |-----------|-------------|
 | **Rounds** | Exactly 3 (`## Round 1`, `## Round 2`, `## Round 3`) |
-| **Questions per Round** | Exactly 3 per round (9 total) |
+| **Questions per Round** | 4-5 per round recommended (12-15 total); 3 per round supported for backwards compatibility |
 | **Fast Money** | Exactly 3 questions (`## Fast Money Round`) - REQUIRED but not yet playable |
 | **Answers per Question** | 2-5 answers |
 | **Point Values** | Integer (no decimals), typically total ~100 |
 
 **⚠️ Important:** Fast Money Round must be included in all game files for the parser to accept them, even though Fast Money gameplay is not yet implemented in the game.
+
+**💡 Why 4-5 questions?** With 500 points needed to win and ~100 points per question, having 12-15 questions ensures games reach a conclusion even when teams only reveal partial answers.
 
 ---
 
@@ -50,6 +52,24 @@ Fast reference for creating compliant game markdown files.
 4. Answer Text - 7
 5. Answer Text - 3
 
+### Question 4
+**Survey Says: [Your question here]**
+
+1. Answer Text - 41
+2. Answer Text - 27
+3. Answer Text - 16
+4. Answer Text - 10
+5. Answer Text - 6
+
+### Question 5
+**Survey Says: [Your question here]**
+
+1. Answer Text - 38
+2. Answer Text - 26
+3. Answer Text - 17
+4. Answer Text - 11
+5. Answer Text - 8
+
 ## Round 2
 
 ### Question 1
@@ -63,6 +83,12 @@ Fast reference for creating compliant game markdown files.
 ### Question 3
 [...]
 
+### Question 4
+[...]
+
+### Question 5
+[...]
+
 ## Round 3
 
 ### Question 1
@@ -72,6 +98,12 @@ Fast reference for creating compliant game markdown files.
 [...]
 
 ### Question 3
+[...]
+
+### Question 4
+[...]
+
+### Question 5
 [...]
 
 ## Fast Money Round
@@ -164,9 +196,9 @@ Fast reference for creating compliant game markdown files.
 Before saving your file:
 
 - [ ] File has exactly 3 rounds labeled `## Round 1`, `## Round 2`, `## Round 3`
-- [ ] Each round has exactly 3 questions
+- [ ] Each round has 4-5 questions (3 questions supported for legacy files)
 - [ ] File has `## Fast Money Round` with exactly 3 questions
-- [ ] Total questions: 12 (9 regular + 3 Fast Money)
+- [ ] Total questions: 15-18 recommended (12-15 regular + 3 Fast Money)
 - [ ] Every question has 2-5 answers
 - [ ] Every answer follows format: `1. Text - Number`
 - [ ] All questions are bold: `**Question Text**`

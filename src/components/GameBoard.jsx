@@ -98,7 +98,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
 
     window.addEventListener('keydown', handleKeyPress)
     return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [activeTeam, strikes, answers, roundPoints, currentRound, currentQuestion, showControls])
+  }, [activeTeam, strikes, answers, roundPoints, currentRound, currentQuestion, showControls, gameData])
 
   const revealAnswer = (index) => {
     if (index >= 0 && index < answers.length && !answers[index].revealed) {
@@ -210,7 +210,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
           <h3 className="text-3xl font-game text-feud-gold mb-2">
             Round {currentRound + 1}
           </h3>
-          <p className="text-xl text-white">Question {currentQuestion + 1} of 3</p>
+          <p className="text-xl text-white">Question {currentQuestion + 1} of {gameData.rounds[currentRound]?.questions.length || 0}</p>
           <p className="text-sm text-white/60 mt-2">{revealedCount} / {answers.length} revealed</p>
         </div>
 
@@ -341,7 +341,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
             <p className="text-xs text-white/60">Press ESC to hide</p>
           </div>
           <div className="space-y-1 text-xs">
-            <p>1-5: Reveal | X: Strike | Backspace: Undo</p>
+            <p>1-5: Reveal | X: Strike | Delete: Undo</p>
             <p>Space: Bank | S: Steal | Tab: Switch Team</p>
             <p>Enter: Next | R: Reset | N: Skip</p>
           </div>

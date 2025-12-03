@@ -92,12 +92,12 @@ You can request changes:
 4. **Usage instructions** for adding it to your game
 
 ### File Structure:
-- **3 regular rounds** (9 questions total)
+- **3 regular rounds** (12-15 questions total, 4-5 per round recommended)
 - **Fast Money round** (3 questions) - **Required but not yet playable**
 - **2-5 answers per question**
 - **Point values for each answer**
 
-**Note:** All game files must include Fast Money questions for the parser to accept them, even though Fast Money gameplay is not yet implemented. The AI generator handles this automatically.
+**Note:** All game files must include Fast Money questions for the parser to accept them, even though Fast Money gameplay is not yet implemented. The AI generator handles this automatically. Files with 3 questions per round (legacy format) are still supported but 4-5 questions per round is recommended for better gameplay.
 
 ---
 

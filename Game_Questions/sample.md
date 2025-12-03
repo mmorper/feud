@@ -29,6 +29,24 @@
 4. Drink Milk - 12
 5. Listen to Music - 8
 
+### Question 4
+**Survey Says: Name a type of weather people complain about**
+
+1. Rain - 41
+2. Snow - 27
+3. Heat - 16
+4. Wind - 10
+5. Cold - 6
+
+### Question 5
+**Survey Says: Name something you might find in a refrigerator**
+
+1. Milk - 38
+2. Eggs - 26
+3. Leftovers - 17
+4. Vegetables - 11
+5. Condiments - 8
+
 ## Round 2
 
 ### Question 1
@@ -58,6 +76,24 @@
 4. Watermelon - 6
 5. Raspberry - 4
 
+### Question 4
+**Survey Says: Name something people wear to stay warm**
+
+1. Jacket - 42
+2. Sweater - 28
+3. Scarf - 15
+4. Gloves - 9
+5. Hat - 6
+
+### Question 5
+**Survey Says: Name a subject taught in school**
+
+1. Math - 39
+2. English - 27
+3. Science - 18
+4. History - 10
+5. Art - 6
+
 ## Round 3
 
 ### Question 1
@@ -86,6 +122,24 @@
 3. Presents - 16
 4. Candles - 9
 5. Party Hats - 5
+
+### Question 4
+**Survey Says: Name a popular hobby**
+
+1. Reading - 36
+2. Gardening - 24
+3. Cooking - 19
+4. Painting - 12
+5. Hiking - 9
+
+### Question 5
+**Survey Says: Name something people save money for**
+
+1. House - 43
+2. Vacation - 26
+3. Car - 15
+4. Retirement - 10
+5. Emergency - 6
 
 ## Fast Money Round
 
