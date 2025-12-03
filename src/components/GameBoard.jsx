@@ -219,10 +219,10 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
           className={`p-6 rounded-lg ${activeTeam === 2 ? 'bg-feud-light-blue' : 'bg-white/10'} backdrop-blur-md`}
           animate={{ scale: activeTeam === 2 ? 1.05 : 1 }}
         >
-          <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-feud-blue' : 'text-white'}`}>
+          <h2 className={`text-2xl font-bold ${activeTeam === 2 ? 'text-white' : 'text-white'}`}>
             {teams.team2}
           </h2>
-          <p className={`text-4xl font-game ${activeTeam === 2 ? 'text-feud-blue' : 'text-feud-light-blue'}`}>
+          <p className={`text-4xl font-game ${activeTeam === 2 ? 'text-white' : 'text-feud-light-blue'}`}>
             {animatedTeam2Score}
           </p>
         </motion.div>
