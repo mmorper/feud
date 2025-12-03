@@ -60,7 +60,7 @@ Your generated files MUST match this exact format for the parser to work:
 ### Question Format (EXACT STRUCTURE)
 ```markdown
 ### Question 1
-**Survey Says: [Your question here]**
+**Name something you take to the beach**
 
 1. Answer 1 - 45
 2. Answer 2 - 30
@@ -69,21 +69,22 @@ Your generated files MUST match this exact format for the parser to work:
 5. Answer 5 - 3
 ```
 
-**Alternative question format** (for Fast Money or modern questions):
+**Alternative format with prefix** (optional):
 ```markdown
 ### Question 1
-**Name something you take to the beach**
+**Survey Says: Name something you take to the beach**
 
 1. Towel - 38
 2. Sunscreen - 26
 ```
 
 ### Critical Parsing Rules
-- ✅ Question text MUST start with `**Survey Says:` or `**Name` (in bold)
+- ✅ Question text MUST be in bold: `**Question text here**`
+- ✅ Question prefix optional: Can use `**Survey Says:**`, `**Name**`, or just the question
 - ✅ Answers MUST follow format: `[number]. [text] - [points]`
 - ✅ Use exactly one space before and after the hyphen
 - ✅ Points must be integers (no decimals)
-- ✅ Each round: Exactly 3 questions
+- ✅ Each round: 4-5 questions (3 for backwards compatibility)
 - ✅ Each question: 2-5 answers
 - ✅ Fast Money: Exactly 3 questions
 
@@ -108,7 +109,7 @@ Your generated files MUST match this exact format for the parser to work:
 ### Parsing Compliance
 - [x] Round headers match exactly: `## Round 1`, `## Round 2`, `## Round 3`, `## Fast Money Round`
 - [x] Question headers start with `### Question [number]`
-- [x] Question text is bold: `**Survey Says: text**` or `**Name text**`
+- [x] Question text is bold: `**Question text**` (prefixes like "Survey Says:" or "Name" are optional)
 - [x] Answer format: `1. Answer Text - 45` (space-hyphen-space)
 - [x] No extra blank lines between answer items
 - [x] File ends with a blank line
@@ -120,7 +121,7 @@ Your generated files MUST match this exact format for the parser to work:
 ### ✅ GOOD Question Example
 ```markdown
 ### Question 1
-**Survey Says: Name something you take with you to the beach**
+**Name something you take with you to the beach**
 
 1. Towel - 38
 2. Sunscreen - 26
@@ -130,7 +131,7 @@ Your generated files MUST match this exact format for the parser to work:
 ```
 
 **Why it's good:**
-- Survey-style question
+- Survey-style question (prefixes like "Survey Says:" are optional)
 - Realistic, relatable answers
 - Points total ~100 and decrease logically
 - Proper formatting with bold question text
@@ -141,17 +142,17 @@ Your generated files MUST match this exact format for the parser to work:
 **Example 1: Wrong Format**
 ```markdown
 ### Question 1
-Survey Says: Name something you take to the beach
+Name something you take to the beach
 
 Towel: 38 points
 Sunscreen: 26 points
 ```
-**Problems:** Question not bold, wrong answer format
+**Problems:** Question not bold (missing `**`), wrong answer format
 
 **Example 2: Unrealistic Distribution**
 ```markdown
 ### Question 1
-**Survey Says: Name a type of fruit**
+**Name a type of fruit**
 
 1. Dragonfruit - 45
 2. Starfruit - 30
@@ -162,7 +163,7 @@ Sunscreen: 26 points
 **Example 3: Not Survey-Style**
 ```markdown
 ### Question 1
-**Survey Says: What year did World War 2 end?**
+**What year did World War 2 end?**
 
 1. 1945 - 100
 ```
@@ -171,7 +172,7 @@ Sunscreen: 26 points
 **Example 4: Too Many Answers**
 ```markdown
 ### Question 1
-**Survey Says: Name a color**
+**Name a color**
 
 1. Red - 20
 2. Blue - 18
@@ -277,7 +278,7 @@ When generating the final file, output it as a complete, ready-to-use markdown f
 ## Round 1
 
 ### Question 1
-**Survey Says: [Question]**
+**[Question text here]**
 
 1. Answer - points
 ...

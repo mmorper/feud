@@ -214,7 +214,7 @@ Create a markdown file in `Game_Questions/` like this:
 
 Repeat for 3 rounds (4-5 questions each recommended, 3 questions supported for legacy files) + Fast Money (3 questions). Save it, restart the server, and boom – new game.
 
-Format details: [Game_Questions/README.md](Game_Questions/README.md)
+Format details: [docs/GAME_FILE_FORMAT.md](docs/GAME_FILE_FORMAT.md)
 
 ---
 
@@ -335,7 +335,7 @@ This project is for educational and entertainment purposes.
 ### For Users
 - **[prompts/USAGE_GUIDE.md](prompts/USAGE_GUIDE.md)** - AI game file generator setup (Claude/ChatGPT)
 - **[prompts/FORMAT_QUICK_REFERENCE.md](prompts/FORMAT_QUICK_REFERENCE.md)** - Game file format cheat sheet
-- **[Game_Questions/README.md](Game_Questions/README.md)** - Manual game creation guide
+- **[docs/GAME_FILE_FORMAT.md](docs/GAME_FILE_FORMAT.md)** - Manual game creation guide
 - **[public/sounds/README.md](public/sounds/README.md)** - Adding custom sound effects
 
 ### For Developers

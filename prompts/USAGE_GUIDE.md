@@ -165,7 +165,7 @@ Feel free to share this prompt with others! You can:
 
 If you encounter issues:
 1. Check the browser console for parser errors
-2. Review the `Game_Questions/README.md` for format requirements
+2. Review the `docs/GAME_FILE_FORMAT.md` for format requirements
 3. Compare your generated file to `Game_Questions/sample.md`
 4. Verify the prompt is loaded correctly in your AI interface
 
