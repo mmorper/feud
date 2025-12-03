@@ -103,8 +103,6 @@ The magic is in the keyboard controls. One person (the host) runs the entire sho
 
 No mouse needed. No screens to click through. Just pure keyboard-driven game show hosting.
 
-Full control reference: [Requirements/host_controls.md](Requirements/host_controls.md)
-
 ---
 
 ## Creating Custom Games
@@ -208,12 +206,10 @@ family_feud/
 │   ├── game-file-generator-prompt.md  # Main system prompt
 │   ├── USAGE_GUIDE.md                 # Setup & usage instructions
 │   └── FORMAT_QUICK_REFERENCE.md      # Format cheat sheet
-├── Requirements/           # Project documentation
-│   ├── todo.md            # Development task list
-│   └── host_controls.md   # Keyboard controls reference
+├── Requirements/           # Development & project management
+│   └── todo.md            # Development history & planning
 ├── docs/                  # Documentation assets
-│   ├── QUICKSTART.md      # Quick setup guide
-│   └── screenshot.png     # Game screenshot (add your own)
+│   └── screenshot.png     # Gameplay screenshot
 ├── src/                   # Source code
 │   ├── components/        # React components
 │   │   ├── MainMenu.jsx      # Main menu screen
@@ -268,13 +264,14 @@ If you see "Port 5173 is already in use":
 
 This project is for educational and entertainment purposes.
 
-## Support & Documentation
+## Documentation & Resources
 
-For additional help, refer to:
-- [docs/QUICKSTART.md](docs/QUICKSTART.md) - Quick setup guide
-- **[prompts/USAGE_GUIDE.md](prompts/USAGE_GUIDE.md) - AI game file generator setup**
-- **[prompts/FORMAT_QUICK_REFERENCE.md](prompts/FORMAT_QUICK_REFERENCE.md) - Format cheat sheet**
-- [Requirements/host_controls.md](Requirements/host_controls.md) - Complete keyboard reference
-- [Game_Questions/README.md](Game_Questions/README.md) - How to create custom games manually
-- [Requirements/todo.md](Requirements/todo.md) - Development history
-- [public/sounds/README.md](public/sounds/README.md) - How to add sound effects
+### For Users
+- **[prompts/USAGE_GUIDE.md](prompts/USAGE_GUIDE.md)** - AI game file generator setup (Claude/ChatGPT)
+- **[prompts/FORMAT_QUICK_REFERENCE.md](prompts/FORMAT_QUICK_REFERENCE.md)** - Game file format cheat sheet
+- **[Game_Questions/README.md](Game_Questions/README.md)** - Manual game creation guide
+- **[public/sounds/README.md](public/sounds/README.md)** - Adding custom sound effects
+
+### For Developers
+- **[Requirements/todo.md](Requirements/todo.md)** - Development history & project planning
+- **[prompts/game-file-generator-prompt.md](prompts/game-file-generator-prompt.md)** - Full AI system prompt
