@@ -343,12 +343,12 @@ Create a specialized prompt for generating Virtru-themed Family Feud games for i
 3. [ ] Create `prompts/virtru-game-generator.md`
 4. [ ] Test prompt with sample Virtru game generation
 5. [ ] Refine based on results
-6. [ ] Document usage in prompts/USAGE_GUIDE.md
+6. [ ] Document usage in prompts/README.md
 
 ### Files to Create/Update
 - [ ] `prompts/virtru-game-generator.md` - Virtru-specific prompt
 - [ ] `prompts/virtru-context.md` (optional) - Company culture context file
-- [ ] `prompts/USAGE_GUIDE.md` - Add Virtru prompt section
+- [ ] `prompts/README.md` - Add Virtru prompt section
 - [ ] `Game_Questions/virtru-sko-2026.md` - First Virtru game file (test)
 
 ### Notes
