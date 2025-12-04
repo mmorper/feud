@@ -361,5 +361,5 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 
 - **Full Documentation:** See `docs/GAME_FILE_FORMAT.md`
 - **Sample Game:** See `Game_Questions/sample.md`
-- **System Prompt:** See `prompts/game-file-generator-prompt.md`
-- **Usage Guide:** See `prompts/USAGE_GUIDE.md`
+- **System Prompt:** See `prompts/game-generator.md`
+- **Usage Guide:** See `prompts/README.md`

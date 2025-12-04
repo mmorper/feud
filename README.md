@@ -52,7 +52,8 @@ One person controls everything via keyboard shortcuts. No clicking, no lag, no "
 
 ✅ **AI-Powered Content Creation**
 - System prompts for Claude Projects & Custom GPTs
-- Generates compliant game files automatically
+- **Game Generator**: Creates compliant game files automatically
+- **Host Sheet Generator**: Transforms games into print-friendly answer sheets
 - Phase-based workflow: theme → questions → validation
 - See `/prompts/` for the full AI toolkit
 
@@ -157,7 +158,9 @@ See the "Building for Production" section below. Or just send them this GitHub r
 
 ## How to Host a Game
 
-The magic is in the keyboard controls. One person (the host) runs the entire show:
+The magic is in the keyboard controls. One person (the host) runs the entire show.
+
+**Pro Tip:** Generate a print-friendly host answer sheet using our AI-powered [Host Sheet Generator](/prompts/host-sheet-generator.md). Get clean, scannable reference sheets in three formats (Minimal, Standard, or Detailed). See examples in `/docs/host/`.
 
 ### The Essentials
 - **`1-5`** → Reveal answers (the bread and butter)
@@ -185,7 +188,7 @@ No mouse needed. No screens to click through. Just pure keyboard-driven game sho
 
 We built system prompts that turn Claude/ChatGPT into game designers:
 
-1. Copy `/prompts/game-file-generator-prompt.md` into Claude Projects or ChatGPT
+1. Copy `/prompts/game-generator.md` into Claude Projects or ChatGPT
 2. Tell it your theme: "Cybersecurity trivia for employees"
 3. The AI asks questions, generates survey-style Q&A, validates format
 4. Copy the output to `Game_Questions/your-game.md`
@@ -193,7 +196,7 @@ We built system prompts that turn Claude/ChatGPT into game designers:
 
 **Why this rocks:** The AI knows your domain, creates realistic answers, ensures compliance, and even adds variety. Built by marketers, validated by the parser.
 
-See [prompts/USAGE_GUIDE.md](prompts/USAGE_GUIDE.md) for full setup.
+See [prompts/README.md](prompts/README.md) for full setup.
 
 ### The Manual Way
 
@@ -276,14 +279,17 @@ family_feud/
 ├── Game_Questions/          # Markdown files with game questions
 │   ├── sample.md           # Sample question format
 │   └── README.md           # Game file format guide
-├── prompts/                # AI prompt system for creating game files
-│   ├── game-file-generator-prompt.md  # Main system prompt
-│   ├── USAGE_GUIDE.md                 # Setup & usage instructions
-│   └── FORMAT_QUICK_REFERENCE.md      # Format cheat sheet
+├── prompts/                # AI prompt system for creating content
+│   ├── game-generator.md       # Game content generator
+│   ├── host-sheet-generator.md # Host answer sheet generator
+│   ├── README.md               # Setup & usage instructions
+│   └── format-reference.md     # Format cheat sheet
 ├── Requirements/           # Development & project management
 │   └── todo.md            # Development history & planning
 ├── docs/                  # Documentation assets
-│   └── screenshot.png     # Gameplay screenshot
+│   ├── host/              # Host answer sheet examples
+│   ├── screenshot.png     # Gameplay screenshot
+│   └── GAME_RULES_SLIDES.md  # Game rules presentation
 ├── src/                   # Source code
 │   ├── components/        # React components
 │   │   ├── MainMenu.jsx      # Main menu screen
@@ -333,11 +339,14 @@ This project is for educational and entertainment purposes.
 ## Documentation & Resources
 
 ### For Users
-- **[prompts/USAGE_GUIDE.md](prompts/USAGE_GUIDE.md)** - AI game file generator setup (Claude/ChatGPT)
-- **[prompts/FORMAT_QUICK_REFERENCE.md](prompts/FORMAT_QUICK_REFERENCE.md)** - Game file format cheat sheet
+- **[prompts/README.md](prompts/README.md)** - AI generators setup (game files + host sheets)
+- **[prompts/format-reference.md](prompts/format-reference.md)** - Game file format cheat sheet
 - **[docs/GAME_FILE_FORMAT.md](docs/GAME_FILE_FORMAT.md)** - Manual game creation guide
+- **[docs/GAME_RULES_SLIDES.md](docs/GAME_RULES_SLIDES.md)** - Game rules presentation slides
+- **[docs/host/README.md](docs/host/README.md)** - Host answer sheet guide & examples
 - **[public/sounds/README.md](public/sounds/README.md)** - Adding custom sound effects
 
 ### For Developers
 - **[Requirements/todo.md](Requirements/todo.md)** - Development history & project planning
-- **[prompts/game-file-generator-prompt.md](prompts/game-file-generator-prompt.md)** - Full AI system prompt
+- **[prompts/game-generator.md](prompts/game-generator.md)** - Game generator system prompt
+- **[prompts/host-sheet-generator.md](prompts/host-sheet-generator.md)** - Host sheet generator system prompt
