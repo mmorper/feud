@@ -1,8 +1,9 @@
 # How to Use the AI Prompt System
 
-This guide explains how to use the two AI system prompts for creating Family Feud content:
+This guide explains how to use the three AI system prompts for creating Family Feud content:
 1. **Game File Generator** - Creates game questions and answers
 2. **Host Sheet Generator** - Transforms game files into print-friendly host answer sheets
+3. **Blend Games** - Intelligently combines 2-3 existing game files into one cohesive game
 
 ## Setup
 
@@ -466,6 +467,384 @@ Check out the `/docs/host/` folder for real examples of all three format styles 
 
 ## Have Fun!
 
-The combination of the Game Generator and Host Sheet Generator gives you everything you need to create and host professional Family Feud games. Create unlimited games, generate clean host sheets, and make your events unforgettable!
+The combination of the Game Generator, Host Sheet Generator, and Blend Games prompt gives you everything you need to create and host professional Family Feud games. Create unlimited games, blend them together, generate clean host sheets, and make your events unforgettable!
 
 Happy hosting! 🎮🎉
+
+---
+
+## Part 3: Blend Games
+
+---
+
+## What is the Blend Games Prompt?
+
+Have multiple game files and want to combine the best questions from each into one mega-game? The **Blend Games** prompt intelligently merges 2-3 existing game files while:
+- Maintaining format compliance with the game parser
+- Re-balancing difficulty across rounds
+- Normalizing point values for consistency
+- Detecting and handling overlapping questions
+- Ensuring thematic coherence
+
+**Why you need this:**
+- ❌ Manually copying questions from multiple files is tedious and error-prone
+- ❌ Point values from different games may be inconsistent
+- ❌ Difficulty progression gets lost when cobbling together random questions
+- ❌ Easy to create duplicate or overlapping questions
+
+**What you get:**
+- ✅ Intelligent question selection based on your desired blend ratio
+- ✅ Automatic difficulty re-balancing (easier → harder across rounds)
+- ✅ Standardized point distributions
+- ✅ Overlap detection with suggestions
+- ✅ Coherence checking for tonal consistency
+- ✅ Fully compliant game file ready to play
+
+---
+
+## Setup (Same as Other Prompts)
+
+Use the same setup process as the Game Generator and Host Sheet Generator, but paste the contents of `blend-games.md` instead.
+
+**Pro tip:** Set up all three prompts as separate Claude Projects or Custom GPTs:
+- "Family Feud Game Creator" (game-generator.md)
+- "Family Feud Host Sheet Maker" (host-sheet-generator.md)
+- "Family Feud Game Blender" (blend-games.md)
+
+---
+
+## How to Use the Blend Games Prompt
+
+### Basic Workflow
+
+1. **Provide your source game files** (2-3 games maximum)
+   - Copy/paste the entire contents of each game file
+   - Or reference filenames if working within a project
+
+2. **Specify your blend ratio** (optional)
+   - Default: Equal distribution (50/50 for 2 games, 33/33/33 for 3 games)
+   - Custom: "60% from Game A, 40% from Game B"
+   - Smart defaults: AI suggests ratios based on game quality/size
+
+3. **Confirm/modify suggested title**
+   - AI suggests a title based on source games
+   - You can accept or provide your own
+
+4. **Review the blend preview** (Phase 2 approval gate)
+   - AI shows selected questions organized by round
+   - Flags overlapping/similar questions
+   - Displays normalized point values
+   - **You must approve before generation**
+
+5. **Request refinements if needed** (Phase 3)
+   - Swap specific questions
+   - Adjust blend ratio
+   - Resolve flagged duplicates
+   - Modify title/theme
+
+6. **Get your blended game** (Phase 4)
+   - Fully validated, parser-compliant game file
+   - Ready to save and play immediately
+
+---
+
+## Example Conversation Flow
+
+**You:** "I want to blend two games: virtru-marketing-team.md and virtru-saas-metrics-2026-budget.md"
+
+**AI:** "Got it! Please paste the full content of both game files, or confirm you'd like me to work with those specific files if I have access."
+
+**You:** [Pastes both game files]
+
+**AI:** "Perfect! I've parsed both games:
+- **Marketing Team:** 13 questions, fun/lighthearted, team trivia
+- **SaaS Metrics Budget:** 15 questions, serious/business, metrics-focused
+
+**Suggested title:** 'Virtru Marketing Team & Budget Edition'
+**Blend strategy:** 50/50 split, 7-8 questions from each
+
+Sound good, or would you like to adjust anything?"
+
+**You:** "That works!"
+
+**AI:** [Presents Phase 2 preview with all selected questions, flagged overlaps, normalized points]
+
+"Here's the blended game structure. I flagged one potential overlap. Would you like to proceed, make changes, or resolve the overlap?"
+
+**You:** "Keep the version from the Budget game for the overlap. Proceed!"
+
+**AI:** [Generates final validated file with blend summary and usage instructions]
+
+---
+
+## What Gets Blended
+
+### Questions
+- AI selects questions from all source games based on your blend ratio
+- Questions are automatically re-balanced by difficulty:
+  - **Round 1:** Easier, more universal questions
+  - **Round 2:** Moderate difficulty
+  - **Round 3:** More challenging or theme-specific
+  - **Fast Money:** Quick, rapid-fire questions
+
+### Point Values
+- Original answer rankings preserved (1st answer = highest points, etc.)
+- Point values normalized to standard distributions:
+  - **5 answers:** 45-30-15-7-3 or 38-26-15-12-9
+  - **4 answers:** 45-30-18-7 or 40-28-17-10
+  - **3 answers:** 50-30-20 or 45-35-20
+  - **2 answers:** 60-40 or 55-45
+- Each question totals approximately 100 points
+
+### Structure
+- **3 regular rounds** (4-5 questions each = 12-15 total)
+- **Fast Money round** (3 questions)
+- Fully compliant with game parser requirements
+
+---
+
+## Smart Features
+
+### Overlap Detection
+The AI automatically detects similar or duplicate questions:
+
+**Example:**
+```
+⚠️ OVERLAP DETECTED
+
+Game A: "Name a key SaaS metric"
+Game B: "Name a SaaS acronym every marketer should know"
+
+These questions are very similar. I recommend keeping Game A's version (better wording).
+
+Which would you prefer?
+A) Keep Game A version
+B) Keep Game B version
+C) Merge both (combine answers)
+```
+
+### Coherence Checking
+The AI validates that blended games have consistent tone:
+
+**High coherence:** No warning needed
+- Example: Blending "Virtru Marketing Team" + "Virtru Budget Metrics" (both Virtru-focused)
+
+**Low coherence:** Warning issued
+```
+⚠️ COHERENCE WARNING
+
+This blend mixes serious business metrics with lighthearted team trivia. The tonal shift might be jarring. Proceed anyway? (Y/N)
+```
+
+### Difficulty Re-balancing
+Questions are intelligently redistributed:
+- Source games may have random difficulty distributions
+- Blended game automatically sorts by difficulty
+- Ensures natural progression from easy → hard
+
+---
+
+## Use Cases
+
+### Use Case 1: Company Event Mega-Game
+**Scenario:** You have separate games for "Company Culture", "Product Knowledge", and "Industry Trends"
+
+**Workflow:**
+1. Blend all 3 games at 40/30/30 ratio
+2. Title: "Company All-Stars Edition"
+3. Result: Comprehensive game covering all aspects
+
+### Use Case 2: Best-Of Compilation
+**Scenario:** You created 5 different games over the year and want to pull the best questions
+
+**Workflow:**
+1. Pick your top 3 games
+2. Blend at equal ratio (33/33/33)
+3. During Phase 2 review, swap out any weak questions
+4. Result: "Greatest Hits" game
+
+### Use Case 3: Theme Variation
+**Scenario:** You have "80s Movies" and "90s Movies" games, want one "80s & 90s Movies" game
+
+**Workflow:**
+1. Blend both at 50/50
+2. AI detects any overlapping questions (e.g., both mention "The Matrix")
+3. Resolve duplicates during Phase 2
+4. Result: Comprehensive retro movie game
+
+### Use Case 4: Difficulty Adjustment
+**Scenario:** One game is too easy, another is expert-level—you want something in between
+
+**Workflow:**
+1. Blend "Easy Company Trivia" + "Expert Product Knowledge"
+2. Set ratio: 70% easy, 30% expert
+3. AI re-balances difficulty across rounds
+4. Result: Moderate difficulty game accessible to all skill levels
+
+---
+
+## Tips for Best Blends
+
+### Choose Compatible Source Games
+✅ **Good blends:**
+- Games with related themes (e.g., "Marketing Team" + "Marketing Budget")
+- Games for the same audience (e.g., both for internal employees)
+- Games with similar tone (both serious or both fun)
+
+❌ **Challenging blends:**
+- Completely unrelated themes (e.g., "Kids Birthday Party" + "Corporate Budget Training")
+- Drastically different tones (e.g., "Silly Office Pranks" + "Cybersecurity Compliance")
+- Different audiences (e.g., "Kids Trivia" + "Expert Technical Knowledge")
+
+**Note:** The AI will warn you about tonal clashes, but you can proceed if intentional!
+
+### Specify Your Blend Ratio Thoughtfully
+- **Equal blend (50/50 or 33/33/33):** Use when all source games are equally strong
+- **Weighted blend (60/40):** Use when one game has better questions or is more relevant
+- **Heavily weighted (70/30):** Use when you want to pull just a few questions from a secondary game
+
+### Review Phase 2 Carefully
+The Phase 2 preview is your chance to verify:
+- ✅ Selected questions match your expectations
+- ✅ Difficulty progression feels natural
+- ✅ Blend ratio is approximately correct
+- ✅ Overlaps are resolved appropriately
+- ✅ Theme/title fits the content
+
+Don't skip this step! It's your approval gate before generation.
+
+### Use Refinements to Perfect the Blend
+During Phase 3, you can request:
+- "Swap Round 2, Q3 for a different question from Game A"
+- "Increase the blend to 60/40 instead of 50/50"
+- "Replace this question—it's too similar to another one"
+- "Move this question to Round 1, it's easier than the others in Round 3"
+
+---
+
+## What the AI Will Deliver
+
+### Final Output Includes:
+
+1. **Complete blended game file** (markdown format)
+2. **Validation summary**
+   - "3 rounds ✓, 15 questions ✓, 75 answers ✓"
+3. **Blend summary**
+   - "Blended from [Game A] (8 questions) and [Game B] (7 questions)"
+   - "Blend ratio: 53/47 (approximately 50/50 requested)"
+4. **Suggested filename**
+   - Based on title (e.g., `virtru-blended-edition.md`)
+5. **Usage instructions**
+   - Where to save, how to load in game
+
+---
+
+## Troubleshooting
+
+### "The blend ratio isn't exactly what I requested"
+- Blending isn't always perfectly precise due to question counts
+- Example: Requesting 50/50 with 12 total questions might result in 53/47
+- The AI will note the actual ratio achieved in the blend summary
+
+### "The AI flagged too many overlaps"
+- This is good! Better to catch duplicates than miss them
+- You can resolve each one during Phase 2 review
+- Choose which version to keep or merge them
+
+### "The blended game doesn't feel coherent"
+- Check if source games have compatible themes/tones
+- Review the coherence warning if one was issued
+- Consider adjusting your source game selection
+
+### "I want to blend more than 3 games"
+- The prompt is optimized for 2-3 games maximum
+- Blending 4+ games can result in fragmented content
+- Alternative: Blend Games A+B first, then blend result with Game C
+
+### "Point values seem off"
+- The AI normalizes all points to standard distributions
+- Original rankings are preserved (1st answer still highest, etc.)
+- If you want specific point values, mention it during Phase 1
+
+---
+
+## Advanced Usage
+
+### Sequential Blending
+Create complex blends by chaining multiple blend operations:
+
+1. Blend Game A + Game B → Save as "Blend-AB.md"
+2. Blend "Blend-AB.md" + Game C → Save as "Blend-ABC.md"
+
+This gives you more control over multi-game blends.
+
+### Weighted Best-Of
+Pull just a few questions from a secondary game:
+
+"Blend 'Company Trivia' (80%) with 'Holiday Special' (20%) to add a few festive questions"
+
+### Theme Expansion
+Use blending to expand a theme:
+
+"Blend 'Basic Cybersecurity' with 'Advanced Threats' to create a comprehensive security game"
+
+---
+
+## Quick Reference: When to Use Each Prompt
+
+| Task | Use This Prompt |
+|------|----------------|
+| Creating a brand new game from scratch | **Game File Generator** |
+| Combining 2-3 existing games | **Blend Games** |
+| Converting game to host sheet | **Host Sheet Generator** |
+| Creating a "best of" compilation | **Blend Games** |
+| Expanding a theme with variety | **Blend Games** |
+| Adjusting difficulty by mixing games | **Blend Games** |
+
+---
+
+## Complete Workflow Example
+
+**Scenario:** You have two good games and want to create one epic game for your annual company event.
+
+1. **Source games:**
+   - `company-culture-2024.md` (13 questions, team-focused)
+   - `product-knowledge-2024.md` (15 questions, technical)
+
+2. **Blend the games:**
+   - Use Blend Games prompt
+   - Paste both game files
+   - Choose 50/50 blend ratio
+   - Title: "Company All-Stars 2024"
+   - Review Phase 2 preview
+   - Resolve 2 flagged overlaps (keep product knowledge versions)
+   - Approve blend
+
+3. **Save blended game:**
+   - Save as: `Game_Questions/company-allstars-2024.md`
+
+4. **Generate host sheet:**
+   - Use Host Sheet Generator
+   - Choose STANDARD format
+   - Save as: `docs/host/HOST_company-allstars-2024.md`
+
+5. **Test and play:**
+   - Restart dev server
+   - Select "Company Allstars 2024" from dropdown
+   - Host the epic game!
+
+---
+
+## See It In Action
+
+The Blend Games prompt follows the same phase-based workflow as the Game Generator and Host Sheet Generator, ensuring a consistent, guided experience every time.
+
+Try blending your existing games and see how the AI intelligently combines them into cohesive, playable games!
+
+---
+
+## Have Fun!
+
+With the Game Generator, Host Sheet Generator, and Blend Games prompt, you have a complete toolkit for creating, combining, and hosting professional Family Feud games. Mix and match your content, create epic compilations, and make your events unforgettable!
+
+Happy blending! 🎮🎉

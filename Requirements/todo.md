@@ -358,3 +358,100 @@ Create a specialized prompt for generating Virtru-themed Family Feud games for i
 - Avoid overly technical jargon in most questions
 - Include enough company culture to feel "insider"
 - Make sure cybersecurity topics are accessible
+
+---
+
+## 16. Blend Games Prompt
+
+### Goal
+Create a system prompt that allows users to blend 2-3 existing game files into a single cohesive game, intelligently selecting and combining questions while maintaining format compliance and game balance.
+
+### Requirements Confirmed
+- **Source games:** Support blending 2-3 game files maximum
+- **User control:** Semi-automated with review (Phase 2 approval before generation)
+- **Question handling:** Keep questions intact by default, flag similar questions for optional merging
+- **Blend ratio:** User specifies ratio (e.g., "50/50" or "60/30/10"), with smart defaults offered
+- **Difficulty balancing:** Automatically re-balance questions across rounds (easier in Round 1, harder in Round 3)
+- **Point normalization:** Standardize point spreads to match game-generator patterns (e.g., 45-30-15-7-3)
+- **Overlap detection:** Auto-detect and flag duplicate/similar questions during Phase 2 review
+- **Theme/title:** AI suggests title based on source games, user can modify
+- **Coherence check:** Validate tonal consistency, warn if mixing serious/silly content clashes
+- **Output format:** Must be fully compliant with game file parser (see `prompts/format-reference.md`)
+
+### Phase-Based Workflow
+
+#### Phase 1: Discovery & Setup
+- User provides source game files (paste content or reference filenames)
+- User specifies blend ratio (default: equal distribution)
+- User confirms/modifies suggested game title and theme
+- AI acknowledges source games and confirms blending strategy
+
+#### Phase 2: Selection & Preview
+- AI parses all source games
+- Selects questions based on blend ratio
+- Re-balances difficulty across rounds
+- Flags overlapping/similar questions
+- Normalizes point values to standard distributions
+- Presents draft structure with question sources labeled
+- **User reviews and approves** before proceeding
+
+#### Phase 3: Refinement (if needed)
+- User requests modifications:
+  - Swap specific questions
+  - Adjust blend ratio
+  - Choose which version of flagged duplicates to keep
+  - Modify title/theme
+- AI applies changes and re-presents for approval
+
+#### Phase 4: Generation & Validation
+- Generate final markdown file with proper formatting
+- Run validation checklist:
+  - [ ] 3 regular rounds (4-5 questions each)
+  - [ ] Fast Money round (3 questions)
+  - [ ] Each question has 2-5 answers
+  - [ ] Point values normalized and consistent
+  - [ ] Format matches parser requirements
+  - [ ] Tone coherence validated (warn if clashing)
+- Deliver final file ready for use
+
+### Technical Specifications
+
+**Point Normalization:**
+- Maintain answer rank order (1st = highest points, etc.)
+- Standardize spreads to common patterns:
+  - 5 answers: 45-30-15-7-3 or 38-26-15-12-9
+  - 4 answers: 45-30-18-7 or 40-28-17-10
+  - 3 answers: 50-30-20 or 45-35-20
+  - 2 answers: 60-40 or 55-45
+- Ensure questions total ~100 points
+
+**Difficulty Re-balancing:**
+- Round 1: Easier, more universal questions from all sources
+- Round 2: Moderate difficulty
+- Round 3: More challenging or theme-specific questions
+- Fast Money: Quick, rapid-fire style questions
+
+**Overlap Detection:**
+- Flag questions with similar themes or keywords
+- Suggest keeping the better-written version
+- Allow user to choose or merge manually
+
+### Files to Create
+- [ ] `prompts/blend-games.md` - Main blend games system prompt
+- [ ] Update `prompts/README.md` - Document the new prompt and usage
+
+### Next Steps
+1. [ ] Create `prompts/blend-games.md` following project standards
+2. [ ] Validate prompt is portable (works in Claude Projects, GPTs, n8n)
+3. [ ] Test with sample game blends (virtru-saas-metrics + virtru-marketing-team)
+4. [ ] Update `prompts/README.md` with usage instructions
+5. [ ] Create example blended game file for testing
+
+### Success Criteria
+- Prompt follows all standards in `.claude/CLAUDE.md`
+- Includes metadata header (version, date, role, purpose)
+- Phase-based workflow with user review gates
+- Validation checklist ensures parser compliance
+- Portable and self-contained (no project dependencies)
+- Good vs Bad examples included
+- Edge case handling documented
