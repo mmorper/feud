@@ -54,13 +54,11 @@ One person controls everything via keyboard shortcuts. No clicking, no lag, no "
 - System prompts for Claude Projects & Custom GPTs
 - **Game Generator**: Creates compliant game files automatically
 - **Host Sheet Generator**: Transforms games into print-friendly answer sheets
-- Phase-based workflow: theme → questions → validation
+- **Blend Games**: Intelligently combines 2-3 existing games with built-in validation
+- **Game Quality Analyzer**: Expert gameplay analysis with scoring, balance checking, and rebalancing suggestions
+- Phase-based workflow with automatic format validation
+- Works everywhere: Claude Code, Claude.ai, ChatGPT, n8n
 - See `/prompts/` for the full AI toolkit
-
-✅ **Hosted Anywhere**
-- GitHub Pages, Netlify, Vercel – pick your flavor
-- Or run locally for office events
-- `npm run build` creates a portable game package
 
 ---
 
@@ -339,7 +337,7 @@ This project is for educational and entertainment purposes.
 ## Documentation & Resources
 
 ### For Users
-- **[prompts/README.md](prompts/README.md)** - AI generators setup (game files + host sheets)
+- **[prompts/README.md](prompts/README.md)** - AI generators setup (game files + host sheets + quality analyzer)
 - **[prompts/format-reference.md](prompts/format-reference.md)** - Game file format cheat sheet
 - **[docs/GAME_FILE_FORMAT.md](docs/GAME_FILE_FORMAT.md)** - Manual game creation guide
 - **[docs/GAME_RULES_SLIDES.md](docs/GAME_RULES_SLIDES.md)** - Game rules presentation slides
@@ -350,3 +348,5 @@ This project is for educational and entertainment purposes.
 - **[Requirements/todo.md](Requirements/todo.md)** - Development history & project planning
 - **[prompts/game-generator.md](prompts/game-generator.md)** - Game generator system prompt
 - **[prompts/host-sheet-generator.md](prompts/host-sheet-generator.md)** - Host sheet generator system prompt
+- **[prompts/blend-games.md](prompts/blend-games.md)** - Game blending system prompt
+- **[prompts/game-quality-analyzer.md](prompts/game-quality-analyzer.md)** - Game quality analyzer system prompt

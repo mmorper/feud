@@ -485,6 +485,7 @@ Have multiple game files and want to combine the best questions from each into o
 - Normalizing point values for consistency
 - Detecting and handling overlapping questions
 - Ensuring thematic coherence
+- **Validating every file before delivery** (works anywhere: Claude Code, Claude.ai, ChatGPT, n8n)
 
 **Why you need this:**
 - ❌ Manually copying questions from multiple files is tedious and error-prone
@@ -498,6 +499,7 @@ Have multiple game files and want to combine the best questions from each into o
 - ✅ Standardized point distributions
 - ✅ Overlap detection with suggestions
 - ✅ Coherence checking for tonal consistency
+- ✅ Built-in validation ensuring parser compatibility
 - ✅ Fully compliant game file ready to play
 
 ---
@@ -543,8 +545,10 @@ Use the same setup process as the Game Generator and Host Sheet Generator, but p
    - Modify title/theme
 
 6. **Get your blended game** (Phase 4)
-   - Fully validated, parser-compliant game file
-   - Ready to save and play immediately
+   - AI automatically validates format, structure, and point values
+   - Presents a validation summary with all checks passed
+   - Fully parser-compliant game file ready to save and play immediately
+   - **Bonus:** If you're not in Claude Code, you'll also get a printable Validation Reference Card for manual verification
 
 ---
 
@@ -766,6 +770,12 @@ During Phase 3, you can request:
 - Original rankings are preserved (1st answer still highest, etc.)
 - If you want specific point values, mention it during Phase 1
 
+### "The game file won't load in the app"
+- The Blend Games prompt includes automatic validation to prevent this
+- Every generated file is checked against parser requirements before delivery
+- If you still encounter issues, check the validation summary in the AI's output
+- The Validation Reference Card (provided for non-Claude Code environments) includes manual checking steps
+
 ---
 
 ## Advanced Usage
@@ -848,3 +858,375 @@ Try blending your existing games and see how the AI intelligently combines them 
 With the Game Generator, Host Sheet Generator, and Blend Games prompt, you have a complete toolkit for creating, combining, and hosting professional Family Feud games. Mix and match your content, create epic compilations, and make your events unforgettable!
 
 Happy blending! 🎮🎉
+
+---
+
+## Part 4: Game Quality Analyzer
+
+---
+
+## What is the Game Quality Analyzer?
+
+After creating or blending game files, you might wonder: *Is this game actually fun to play? Will it work well for my audience?* The **Game Quality Analyzer** performs expert gameplay analysis, evaluating balance, accessibility, difficulty progression, and identifying potential problem questions.
+
+**Why you need this:**
+- ❌ Hard to objectively assess whether a game will play well
+- ❌ Point distributions might be imbalanced without obvious visual cues
+- ❌ Difficulty progression may feel off but hard to pinpoint why
+- ❌ Some questions work on paper but fail in live gameplay
+
+**What you get:**
+- ✅ Comprehensive gameplay analysis across multiple frameworks
+- ✅ Accessibility scoring (Universal/Moderate/Insider knowledge)
+- ✅ Point distribution balance checking
+- ✅ Difficulty progression assessment
+- ✅ Problem question detection with severity levels (Critical/Warning/Suggestion)
+- ✅ Comparative analysis when evaluating multiple games
+- ✅ Rebalancing suggestions with specific fixes
+- ✅ Numeric scoring + letter grades for quick assessment
+
+---
+
+## Setup (Same as Other Prompts)
+
+Use the same setup process, but paste the contents of `game-quality-analyzer.md` instead.
+
+**Pro tip:** Add this as a fourth Claude Project or Custom GPT:
+- "Family Feud Game Creator" (game-generator.md)
+- "Family Feud Host Sheet Maker" (host-sheet-generator.md)
+- "Family Feud Game Blender" (blend-games.md)
+- "Family Feud Game Analyzer" (game-quality-analyzer.md)
+
+---
+
+## How to Use the Game Quality Analyzer
+
+### Basic Workflow
+
+1. **Provide your game file**
+   - Copy/paste the entire contents of the game .md file
+   - Or reference the filename if working within a project
+
+2. **Specify what to analyze** (AI will ask)
+   - Single game analysis
+   - Compare 2-3 games
+   - Full analysis or specific aspects only
+
+3. **Receive comprehensive evaluation**
+   - Structural analysis
+   - Accessibility scoring
+   - Point distribution analysis
+   - Difficulty progression
+   - Tonal consistency
+   - Problem question detection
+   - Final grade and recommendations
+
+4. **Get rebalancing suggestions** (if needed)
+   - Specific fixes for flagged questions
+   - Point value adjustments
+   - Question replacement recommendations
+
+### Example Conversation Flow
+
+**You:** "Analyze this game file: [paste virtru-marketing-game-1.md]"
+
+**AI:** "Got it! This game has 3 rounds with 13 questions. Would you like:
+1. Full analysis (all frameworks)
+2. Quick assessment (structure + problem detection only)
+3. Comparative analysis (compare against other games)
+4. Custom (choose specific aspects)"
+
+**You:** "Full analysis please"
+
+**AI:** [Performs 6-phase analysis including accessibility scoring, point distribution, difficulty progression, tonal consistency, problem detection, and final scoring]
+
+"**OVERALL GRADE: A (88/100)**
+
+**Summary:** Well-balanced game with universal appeal. Strong difficulty progression. One question in Round 2 may need rebalancing (answer points too concentrated). Recommended for mixed audiences.
+
+**Problems Detected:**
+- ⚠️ WARNING: Round 2, Q3 has 80-15-5 distribution (too top-heavy)
+
+**Suggested Fix:**
+Change distribution from 80-15-5 to 50-30-20 for better gameplay balance."
+
+---
+
+## What Gets Analyzed
+
+### 1. Structural Analysis
+- Question counts per round
+- Answer counts per question
+- Game length estimation (minutes)
+- Format compliance verification
+
+### 2. Accessibility Scoring
+Each question categorized as:
+- **Universal (3 pts):** Anyone can reasonably guess (e.g., "Name a paid advertising channel")
+- **Moderate (2 pts):** Requires some domain knowledge (e.g., "Name a martech tool in Virtru's stack")
+- **Insider (1 pt):** Requires specific insider knowledge (e.g., "Name something Matt Howard does on vacation")
+
+**Game Accessibility Score:** Average across all questions
+- 2.5-3.0 = Universal appeal
+- 2.0-2.4 = Moderate accessibility
+- 1.0-1.9 = Insider-focused
+
+### 3. Point Distribution Analysis
+Checks for imbalanced distributions:
+- **Balanced:** Points spread reasonably (e.g., 45-30-15-7-3)
+- **Top-Heavy:** Too concentrated in top answer (e.g., 80-15-5)
+- **Too Flat:** Answers too similar in value (e.g., 30-28-26-16)
+
+### 4. Difficulty Progression
+Evaluates whether rounds flow naturally:
+- Round 1 should be easier/more universal
+- Round 2 moderate difficulty
+- Round 3 can be more challenging
+- Flags jarring difficulty spikes
+
+### 5. Tonal Consistency
+Assesses whether the game maintains coherent tone:
+- All serious/business → Consistent
+- Mix of serious + lighthearted → May work if balanced
+- Chaotic tone shifts → Flagged as potential issue
+
+### 6. Problem Question Detection
+Three severity levels:
+- **🚨 CRITICAL:** Game-breaking issues (invalid format, missing data)
+- **⚠️ WARNING:** Gameplay problems (imbalanced points, confusing wording)
+- **💡 SUGGESTION:** Minor improvements (better alternatives available)
+
+---
+
+## Use Cases
+
+### Use Case 1: Post-Creation Quality Check
+**Scenario:** Just created a new game, want to verify it's ready to play
+
+**Workflow:**
+1. Use Game Generator to create game file
+2. Use Quality Analyzer to evaluate
+3. Apply suggested fixes if any warnings/criticals
+4. Generate host sheet once validated
+
+### Use Case 2: Comparing Multiple Games
+**Scenario:** Have 3 games, need to pick the best one for an event
+
+**Workflow:**
+1. Run comparative analysis on all 3 games
+2. Review accessibility scores (pick based on audience)
+3. Check which has best balance/progression
+4. Use the highest-graded game or blend the best questions
+
+### Use Case 3: Fixing Problem Games
+**Scenario:** A game feels "off" during playtesting
+
+**Workflow:**
+1. Analyze the problematic game
+2. Review problem question list
+3. Apply rebalancing suggestions
+4. Re-analyze to confirm fixes worked
+
+### Use Case 4: Pre-Event Validation
+**Scenario:** Hosting a big event tomorrow, want to ensure game quality
+
+**Workflow:**
+1. Analyze your planned game
+2. Check for any Critical or Warning issues
+3. Fix flagged problems
+4. Run quick re-analysis to confirm grade improved
+5. Generate host sheet and proceed with confidence
+
+---
+
+## Output Format
+
+### Scoring System
+Each game receives:
+- **Numeric scores** (out of 100) across categories
+- **Letter grade** (A+ to F)
+- **Subscores** for each evaluation framework
+- **Comparative rankings** (when analyzing multiple games)
+
+### Problem Question Report
+For each flagged question:
+```
+⚠️ WARNING: Round 2, Question 3
+Issue: Top-heavy point distribution (80-15-5)
+Impact: First answer dominates; little incentive to guess others
+Severity: Medium
+
+Suggested Fix:
+Rebalance to 50-30-20 distribution
+```
+
+### Final Summary
+- Overall grade and score
+- Strengths/weaknesses
+- Predicted gameplay experience
+- Recommendations (use as-is, fix flagged issues, consider blending, etc.)
+
+---
+
+## When to Use Quality Analyzer
+
+### ✅ Use When:
+- Creating a new game (post-generation validation)
+- Blending multiple games (post-blend quality check)
+- Preparing for an important event (pre-event verification)
+- Game feels "off" in playtesting (diagnostic analysis)
+- Comparing multiple games to pick the best one
+
+### ❌ Skip When:
+- Still in Phase 2 of Game Generator (premature to analyze drafts)
+- Just making minor edits to a validated game
+- Time-constrained and game already tested successfully in past
+
+---
+
+## Tips for Best Results
+
+### Provide Complete Game Files
+- Paste the entire game (all rounds + Fast Money)
+- Ensure proper markdown formatting
+- Don't paste partial games (analyzer needs full context)
+
+### Be Specific About Analysis Needs
+If you only care about certain aspects, specify:
+- "Just check point distributions"
+- "Focus on accessibility scoring"
+- "Only flag Critical/Warning issues, skip Suggestions"
+
+### Act on Critical/Warning Issues
+- **Critical:** Must fix before using game
+- **Warning:** Should fix for best experience
+- **Suggestion:** Optional improvements
+
+### Use Comparative Mode Strategically
+When comparing multiple games:
+- Specify your selection criteria (audience, event type, time available)
+- Ask for recommendation: "Which game is best for a mixed team of new and veteran employees?"
+
+---
+
+## Troubleshooting
+
+### "The analyzer gave a low grade but I think the game is fine"
+- Analyzer uses objective frameworks; gameplay feel is subjective
+- Review specific flagged issues to see if they matter for your use case
+- Low accessibility scores are fine for insider-focused audiences
+
+### "I don't agree with the difficulty assessment"
+- Difficulty is subjective and audience-dependent
+- Analyzer uses heuristics (universal knowledge vs. insider knowledge)
+- Override if you know your audience's expertise level
+
+### "Too many Suggestions flagged"
+- Suggestions are optional improvements, not requirements
+- If the game has no Critical/Warning issues, it's playable
+- You can ask: "Only show Critical and Warning issues"
+
+### "The analyzer missed an obvious problem"
+- The analyzer uses pattern-based detection
+- If you spot issues it missed, report them for manual review
+- Some problems (like cultural sensitivity) require human judgment
+
+---
+
+## Advanced Usage
+
+### Custom Analysis Criteria
+Ask the analyzer to focus on specific concerns:
+- "Are any questions too company-specific for external audiences?"
+- "Which questions might be too dated for Gen Z players?"
+- "Flag any questions that could be controversial"
+
+### Iterative Refinement
+Use the analyzer in a loop:
+1. Analyze game → Get grade B
+2. Fix flagged Warnings
+3. Re-analyze → Get grade A
+4. Proceed with confidence
+
+### Blend Optimization
+Analyze source games before blending:
+- Check which source game has best balance
+- Identify weak questions to exclude from blend
+- Weight blend ratio toward higher-scoring game
+
+---
+
+## Integration with Other Prompts
+
+### Game Generator + Quality Analyzer
+1. Use Game Generator to create game
+2. Run Quality Analyzer on generated file
+3. Request refinements from Game Generator based on findings
+4. Re-analyze until satisfied
+
+### Blend Games + Quality Analyzer
+1. Use Blend Games to combine files
+2. Run Quality Analyzer on blended result
+3. Note: Blend Games includes built-in validation, but Quality Analyzer goes deeper into gameplay quality
+
+### Host Sheet Generator + Quality Analyzer
+1. Analyze game first to identify problem questions
+2. Fix issues before generating host sheet
+3. Generate host sheet for the validated game
+
+---
+
+## Quick Reference: When to Use Each Prompt
+
+| Task | Use This Prompt |
+|------|----------------|
+| Creating new game questions | **Game File Generator** |
+| Combining existing games | **Blend Games** |
+| Evaluating game quality | **Game Quality Analyzer** |
+| Converting to host sheet | **Host Sheet Generator** |
+| Comparing multiple games | **Game Quality Analyzer** |
+| Fixing problem questions | **Game Quality Analyzer** → **Game File Generator** |
+| Pre-event validation | **Game Quality Analyzer** |
+
+---
+
+## Complete Workflow Example
+
+**Scenario:** Creating and validating a game for your company's annual kickoff
+
+1. **Create the game:**
+   - Use Game File Generator
+   - Theme: "Company Highlights 2024"
+   - 15 questions across 3 rounds
+
+2. **Analyze quality:**
+   - Use Game Quality Analyzer
+   - Full analysis mode
+   - Result: Grade B (82/100)
+   - 2 Warnings flagged (imbalanced point distributions)
+
+3. **Fix issues:**
+   - Rebalance Round 2, Q3: Change 80-15-5 to 50-30-20
+   - Rebalance Round 3, Q5: Change 70-20-10 to 45-35-20
+
+4. **Re-analyze:**
+   - Run analyzer again
+   - Result: Grade A (91/100)
+   - No Critical/Warning issues
+
+5. **Generate host sheet:**
+   - Use Host Sheet Generator
+   - STANDARD format
+   - Print for event
+
+6. **Host the game:**
+   - Confident the game is well-balanced
+   - Host sheet ready as reference
+
+---
+
+## Have Fun!
+
+The Game Quality Analyzer ensures your games are polished, balanced, and ready to deliver great experiences. Combined with the Game Generator, Blend Games, and Host Sheet Generator, you have a complete content creation and quality assurance toolkit!
+
+Happy analyzing! 🎮📊

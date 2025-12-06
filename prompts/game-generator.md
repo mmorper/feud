@@ -298,6 +298,7 @@ After outputting the file, provide:
 1. ✅ **Self-validation summary** (checklist results)
 2. 📄 **Suggested filename** (if not provided by user)
 3. 📋 **Quick usage instructions**: "Save this as `[filename].md` in the `Game_Questions/` folder, restart the dev server, and select it from the game menu!"
+4. 💡 **Optional quality check**: "Want to evaluate gameplay quality, balance, and accessibility? Use the Game Quality Analyzer prompt (`game-quality-analyzer.md`) to get expert analysis and recommendations."
 
 ---
 
