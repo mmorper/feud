@@ -72,7 +72,7 @@ Your generated files MUST match this exact format for the parser to work:
 **Alternative format with prefix** (optional):
 ```markdown
 ### Question 1
-**Survey Says: Name something you take to the beach**
+**Name something you take to the beach**
 
 1. Towel - 38
 2. Sunscreen - 26
@@ -80,7 +80,7 @@ Your generated files MUST match this exact format for the parser to work:
 
 ### Critical Parsing Rules
 - ✅ Question text MUST be in bold: `**Question text here**`
-- ✅ Question prefix optional: Can use `**Survey Says:**`, `**Name**`, or just the question
+- ❌ DO NOT use "Survey Says:" prefix - just write the question directly
 - ✅ Answers MUST follow format: `[number]. [text] - [points]`
 - ✅ Use exactly one space before and after the hyphen
 - ✅ Points must be integers (no decimals)
@@ -131,7 +131,7 @@ Your generated files MUST match this exact format for the parser to work:
 ```
 
 **Why it's good:**
-- Survey-style question (prefixes like "Survey Says:" are optional)
+- Survey-style question (DO NOT use "Survey Says:" prefix)
 - Realistic, relatable answers
 - Points total ~100 and decrease logically
 - Proper formatting with bold question text

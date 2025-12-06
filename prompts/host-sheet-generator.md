@@ -180,7 +180,7 @@ When extracting content from the input markdown file:
 **Look for:** `### Question [number]` followed by `**Question text**`
 - Strip the `###` and `**` markdown
 - Extract the question text cleanly
-- Handle optional prefixes like "Survey Says:" or "Name"
+- Questions should NOT include "Survey Says:" prefix - just use the question text directly
 
 ### Answers
 **Look for:** `1. Answer Text - 45`

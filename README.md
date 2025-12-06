@@ -206,7 +206,7 @@ Create a markdown file in `Game_Questions/` like this:
 ## Round 1
 
 ### Question 1
-**Survey Says: Name something everyone pretends to understand**
+**Name something everyone pretends to understand**
 
 1. Blockchain - 35
 2. Kubernetes - 28

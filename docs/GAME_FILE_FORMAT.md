@@ -17,7 +17,7 @@ Each game file must follow this structure:
 ## Round 1
 
 ### Question 1
-**Survey Says: Your question here**
+**Your question here**
 
 1. Answer 1 - 45
 2. Answer 2 - 30

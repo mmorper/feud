@@ -3,7 +3,7 @@
 ## Round 1
 
 ### Question 1
-**Survey Says: Name something you take with you to the beach**
+**Name something you take with you to the beach**
 
 1. Towel - 38
 2. Sunscreen - 26
@@ -12,7 +12,7 @@
 5. Beach Ball - 9
 
 ### Question 2
-**Survey Says: Name a popular pizza topping**
+**Name a popular pizza topping**
 
 1. Pepperoni - 45
 2. Cheese - 28
@@ -21,7 +21,7 @@
 5. Peppers - 5
 
 ### Question 3
-**Survey Says: Name something people do when they can't sleep**
+**Name something people do when they can't sleep**
 
 1. Watch TV - 35
 2. Read - 27
@@ -30,7 +30,7 @@
 5. Listen to Music - 8
 
 ### Question 4
-**Survey Says: Name a type of weather people complain about**
+**Name a type of weather people complain about**
 
 1. Rain - 41
 2. Snow - 27
@@ -39,7 +39,7 @@
 5. Cold - 6
 
 ### Question 5
-**Survey Says: Name something you might find in a refrigerator**
+**Name something you might find in a refrigerator**
 
 1. Milk - 38
 2. Eggs - 26
@@ -50,7 +50,7 @@
 ## Round 2
 
 ### Question 1
-**Survey Says: Name a reason you might be late to work**
+**Name a reason you might be late to work**
 
 1. Traffic - 42
 2. Overslept - 31
@@ -59,7 +59,7 @@
 5. Forgot Something - 4
 
 ### Question 2
-**Survey Says: Name something you might find in a gym bag**
+**Name something you might find in a gym bag**
 
 1. Towel - 36
 2. Water Bottle - 29
@@ -68,7 +68,7 @@
 5. Gym Clothes - 6
 
 ### Question 3
-**Survey Says: Name a fruit that's red**
+**Name a fruit that's red**
 
 1. Apple - 47
 2. Strawberry - 31
@@ -77,7 +77,7 @@
 5. Raspberry - 4
 
 ### Question 4
-**Survey Says: Name something people wear to stay warm**
+**Name something people wear to stay warm**
 
 1. Jacket - 42
 2. Sweater - 28
@@ -86,7 +86,7 @@
 5. Hat - 6
 
 ### Question 5
-**Survey Says: Name a subject taught in school**
+**Name a subject taught in school**
 
 1. Math - 39
 2. English - 27
@@ -97,7 +97,7 @@
 ## Round 3
 
 ### Question 1
-**Survey Says: Name something you associate with a pirate**
+**Name something you associate with a pirate**
 
 1. Eye Patch - 40
 2. Parrot - 28
@@ -106,7 +106,7 @@
 5. Ship - 6
 
 ### Question 2
-**Survey Says: Name a place where people whisper**
+**Name a place where people whisper**
 
 1. Library - 48
 2. Church - 29
@@ -115,7 +115,7 @@
 5. Classroom - 4
 
 ### Question 3
-**Survey Says: Name something you might see at a birthday party**
+**Name something you might see at a birthday party**
 
 1. Cake - 44
 2. Balloons - 26
@@ -124,7 +124,7 @@
 5. Party Hats - 5
 
 ### Question 4
-**Survey Says: Name a popular hobby**
+**Name a popular hobby**
 
 1. Reading - 36
 2. Gardening - 24
@@ -133,7 +133,7 @@
 5. Hiking - 9
 
 ### Question 5
-**Survey Says: Name something people save money for**
+**Name something people save money for**
 
 1. House - 43
 2. Vacation - 26

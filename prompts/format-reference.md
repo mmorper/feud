@@ -26,7 +26,7 @@ Fast reference for creating compliant game markdown files.
 ## Round 1
 
 ### Question 1
-**Survey Says: [Your question here]**
+**[Your question here]**
 
 1. Answer Text - 45
 2. Answer Text - 30
@@ -35,7 +35,7 @@ Fast reference for creating compliant game markdown files.
 5. Answer Text - 3
 
 ### Question 2
-**Survey Says: [Your question here]**
+**[Your question here]**
 
 1. Answer Text - 42
 2. Answer Text - 28
@@ -44,7 +44,7 @@ Fast reference for creating compliant game markdown files.
 5. Answer Text - 4
 
 ### Question 3
-**Survey Says: [Your question here]**
+**[Your question here]**
 
 1. Answer Text - 40
 2. Answer Text - 30
@@ -53,7 +53,7 @@ Fast reference for creating compliant game markdown files.
 5. Answer Text - 3
 
 ### Question 4
-**Survey Says: [Your question here]**
+**[Your question here]**
 
 1. Answer Text - 41
 2. Answer Text - 27
@@ -62,7 +62,7 @@ Fast reference for creating compliant game markdown files.
 5. Answer Text - 6
 
 ### Question 5
-**Survey Says: [Your question here]**
+**[Your question here]**
 
 1. Answer Text - 38
 2. Answer Text - 26
@@ -73,7 +73,7 @@ Fast reference for creating compliant game markdown files.
 ## Round 2
 
 ### Question 1
-**Survey Says: [Your question here]**
+**[Your question here]**
 
 [Same format as Round 1]
 
@@ -129,7 +129,7 @@ Fast reference for creating compliant game markdown files.
 ## Critical Parsing Rules
 
 ✅ **DO:**
-- Use `**Survey Says:**` or `**Name**` (in bold) for questions
+- Use `**Your question**` or `**Name**` (in bold) for questions
 - Format answers: `1. Text - 45` (space-hyphen-space)
 - Use exact round headers: `## Round 1`, `## Round 2`, `## Round 3`, `## Fast Money Round`
 - Use `### Question 1`, `### Question 2`, etc.
@@ -212,7 +212,7 @@ Before saving your file:
 
 | Error | Cause | Fix |
 |-------|-------|-----|
-| "Question not found" | Question text not bold | Add `**` around question: `**Survey Says: Text**` |
+| "Question not found" | Question text not bold | Add `**` around question: `**Text**` |
 | "Invalid answer format" | Wrong syntax | Use: `1. Answer - 45` (space-hyphen-space) |
 | "Wrong number of questions" | Missing/extra questions | Ensure exactly 3 per round |
 | "Round not detected" | Misspelled header | Use exact text: `## Round 1` |
@@ -241,7 +241,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 ## Round 1
 
 ### Question 1
-**Survey Says: Name a fruit**
+**Name a fruit**
 
 1. Apple - 45
 2. Banana - 30
@@ -250,7 +250,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 5. Strawberry - 3
 
 ### Question 2
-**Survey Says: Name a color**
+**Name a color**
 
 1. Red - 40
 2. Blue - 30
@@ -259,7 +259,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 5. Black - 3
 
 ### Question 3
-**Survey Says: Name a day of the week**
+**Name a day of the week**
 
 1. Friday - 42
 2. Saturday - 28
@@ -270,7 +270,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 ## Round 2
 
 ### Question 1
-**Survey Says: Name something hot**
+**Name something hot**
 
 1. Fire - 45
 2. Sun - 30
@@ -279,7 +279,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 5. Summer - 3
 
 ### Question 2
-**Survey Says: Name a pet**
+**Name a pet**
 
 1. Dog - 50
 2. Cat - 35
@@ -288,7 +288,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 5. Hamster - 2
 
 ### Question 3
-**Survey Says: Name a sport**
+**Name a sport**
 
 1. Football - 40
 2. Basketball - 28
@@ -299,7 +299,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 ## Round 3
 
 ### Question 1
-**Survey Says: Name something cold**
+**Name something cold**
 
 1. Ice - 42
 2. Snow - 28
@@ -308,7 +308,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 5. Freezer - 5
 
 ### Question 2
-**Survey Says: Name a vehicle**
+**Name a vehicle**
 
 1. Car - 45
 2. Truck - 25
@@ -317,7 +317,7 @@ Use lowercase with hyphens (`-`) or underscores (`_`) to separate words.
 5. Bus - 5
 
 ### Question 3
-**Survey Says: Name a holiday**
+**Name a holiday**
 
 1. Christmas - 50
 2. Thanksgiving - 25
