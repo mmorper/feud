@@ -83,6 +83,14 @@
 4. Travel and Entertainment (2%) - 12
 5. Dues and Subscriptions (2%) - 10
 
+### Question 5
+**Name a category in Virtru's 2026 paid media budget breakdown**
+
+1. Search ($2.1M) - 50
+2. ABM/Intent ($324K) - 25
+3. Advertising ($321K) - 15
+4. Social ($198K) - 10
+
 ## Round 3
 
 ### Question 1
@@ -118,6 +126,13 @@
 3. PreVeil - 18
 4. Proofpoint (bad recipient experience) - 15
 5. Paubox - 10
+
+### Question 5
+**Name a 2026 marketing budget area and tell me what percentage goes to Federal**
+
+1. Field Marketing - 35% Federal ($440K) - 45
+2. Overall Programs - 17% Federal ($1.0M) - 35
+3. Paid Media - 7.5% Federal ($232K) - 20
 
 ## Fast Money Round
 

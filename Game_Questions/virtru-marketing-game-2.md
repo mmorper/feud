@@ -43,6 +43,14 @@
 3. Net Retention (91% to 115%) - 25
 4. Rule of 40 (–30% to 20%) - 20
 
+### Question 6
+**Name a paid media category that saw a MASSIVE year-over-year increase from FY25 to FY26**
+
+1. Advertising (517% increase!) - 45
+2. Referral (192% increase) - 30
+3. Social (34% increase) - 15
+4. Search (23% increase) - 10
+
 ## Round 2
 
 ### Question 1
@@ -114,6 +122,13 @@
 3. G2 Crowd - 20
 4. LeanData - 14
 5. Goldcast - 12
+
+### Question 5
+**Name a 2026 marketing budget area and tell me what percentage goes to Commercial**
+
+1. Paid Media - 92.5% Commercial ($2.87M) - 45
+2. Overall Programs - 67% Commercial ($3.9M) - 35
+3. Field Marketing - 65% Commercial ($827K) - 20
 
 ## Fast Money Round
 

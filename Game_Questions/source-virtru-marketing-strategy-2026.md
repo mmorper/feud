@@ -35,6 +35,14 @@
 3. Reach buyers during their research phase - 20
 4. Build authentic thought leadership - 12
 
+### Question 5
+**Name a paid media category that saw a MASSIVE year-over-year increase from FY25 to FY26**
+
+1. Advertising (517% increase!) - 45
+2. Referral (192% increase) - 30
+3. Social (34% increase) - 15
+4. Search (23% increase) - 10
+
 ## Round 2
 
 ### Question 1
@@ -71,6 +79,14 @@
 3. 6sense - 18
 4. Outreach - 12
 
+### Question 5
+**Name a category in Virtru's 2026 paid media budget breakdown**
+
+1. Search ($2.1M) - 50
+2. ABM/Intent ($324K) - 25
+3. Advertising ($321K) - 15
+4. Social ($198K) - 10
+
 ## Round 3
 
 ### Question 1
@@ -104,6 +120,28 @@
 3. Mimecast - 20
 4. Box - 15
 5. Dropbox - 13
+
+### Question 5
+**Name a 2026 marketing budget area and tell me what percentage goes to Federal**
+
+1. Field Marketing - 35% Federal ($440K) - 45
+2. Overall Programs - 17% Federal ($1.0M) - 35
+3. Paid Media - 7.5% Federal ($232K) - 20
+
+### Question 6
+**Name a 2026 marketing budget area and tell me what percentage goes to Commercial**
+
+1. Paid Media - 92.5% Commercial ($2.87M) - 45
+2. Overall Programs - 67% Commercial ($3.9M) - 35
+3. Field Marketing - 65% Commercial ($827K) - 20
+
+### Question 7
+**Name a category included in the 'Other' Programs budget ($0.9M)**
+
+1. PR & Analysts - 35
+2. Martech & Software - 30
+3. virtru.com - 20
+4. T/E & Education - 15
 
 ## Fast Money Round
 

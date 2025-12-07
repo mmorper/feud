@@ -80,6 +80,14 @@
 4. RSA - 8
 5. Gov Tech Events - 5
 
+### Question 5
+**Name a category included in the 'Other' Programs budget ($0.9M)**
+
+1. PR & Analysts - 35
+2. Martech & Software - 30
+3. virtru.com - 20
+4. T/E & Education - 15
+
 ## Round 3
 
 ### Question 1
