@@ -235,16 +235,47 @@ Before you can run this project, you need to have **Node.js** installed on your 
 4. **Start the server**: `npm run dev`
 5. **Open browser**: `http://localhost:5173`
 
-### Building for Production
+### Building for Production (AKA: Putting Your Game on the Internet)
 
-Deploy anywhere with a static build:
+Remember how `npm run dev` runs the game on your computer? That's great for testing, but nobody else can access it. To share it with the world (or just your company), you need to **build** it.
+
+**What does building do?**
+
+It takes all your code and creates a folder called `dist/` with optimized, production-ready files. Think of it as packaging your game into a neat little box that works on any web server.
+
+**How to build:**
 
 ```bash
-npm run build        # Creates dist/ folder
-npm run preview      # Test the build locally
+npm run build
 ```
 
-Host the `dist/` folder on GitHub Pages, Netlify, Vercel, or your company's internal servers.
+That's it. You'll see a new `dist/` folder appear with your game inside.
+
+**Now what?**
+
+Take the **contents** of that `dist/` folder (the files inside, not the folder itself) and upload them to literally any web hosting service. Once they're online, anyone with the URL can play your game.
+
+**Where can you host it?**
+
+The beauty of this game? It's just HTML, CSS, and JavaScript files. No databases, no servers, no backend wizardry. That means you can stick it anywhere that serves web pages:
+
+- **Your company's website** (if you have access – ask your web team)
+- **Netlify** (drag & drop the folder, get a URL – tell your dev friends you "deployed to Netlify" and watch them nod approvingly)
+- **GitHub Pages** (free hosting from GitHub – makes you look extra technical)
+- **Vercel** (another trendy option developers love)
+- **AWS S3** (if you're feeling fancy and have an AWS account)
+- **Your internal file server** (if IT set up web hosting)
+- **Any FTP server** (old school, but it works)
+
+**To test your build locally before deploying:**
+
+```bash
+npm run preview
+```
+
+This simulates how the game will behave in production. If it works here, it'll work anywhere.
+
+**Pro Tip:** After you build, the `dist/` folder is disposable. You can delete it and rebuild anytime with `npm run build`. It's not tracked in Git (that's what `.gitignore` is for), so don't worry about committing it.
 
 ## Features
 
