@@ -255,9 +255,17 @@ That's it. You'll see a new `dist/` folder appear with your game inside.
 
 Take the **contents** of that `dist/` folder (the files inside, not the folder itself) and upload them to literally any web hosting service. Once they're online, anyone with the URL can play your game.
 
+**Wait, why is this so easy?**
+
+This is what developers call a **"JAMstack"** app (JavaScript, APIs, and Markup). Fancy name, simple concept: it's a website that doesn't need a server running in the background. No databases. No PHP scripts. No Node.js process humming along 24/7.
+
+Everything runs in the user's browser. The game files? Just static HTML, CSS, and JavaScript. You literally upload them to a folder on the internet, and they work. It's like hosting a Word document, except it's an entire game show.
+
+**Why this matters:** Traditional web apps need servers, databases, and a dev team to keep them alive. JAMstack apps? Upload once, works forever. No maintenance. No crashes. No bills scaling with traffic. Your IT team will love you. (Okay, they'll be mildly impressed. But still.)
+
 **Where can you host it?**
 
-The beauty of this game? It's just HTML, CSS, and JavaScript files. No databases, no servers, no backend wizardry. That means you can stick it anywhere that serves web pages:
+The beauty of this architecture? You can stick it anywhere that serves web pages:
 
 - **Your company's website** (if you have access – ask your web team)
 - **Netlify** (drag & drop the folder, get a URL – tell your dev friends you "deployed to Netlify" and watch them nod approvingly)
