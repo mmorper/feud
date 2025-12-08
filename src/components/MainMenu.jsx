@@ -1,10 +1,26 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { getAvailableGames } from '../utils/questionParser'
 
 function MainMenu({ onStartGame }) {
   const [selectedGame, setSelectedGame] = useState('sample.md')
+  const [showQuickInfo, setShowQuickInfo] = useState(true)
   const availableGames = getAvailableGames()
+
+  // Load user preference from localStorage on mount
+  useEffect(() => {
+    const savedPreference = localStorage.getItem('showQuickInfo')
+    if (savedPreference !== null) {
+      setShowQuickInfo(savedPreference === 'true')
+    }
+  }, [])
+
+  // Save user preference to localStorage when toggled
+  const toggleQuickInfo = () => {
+    const newValue = !showQuickInfo
+    setShowQuickInfo(newValue)
+    localStorage.setItem('showQuickInfo', newValue.toString())
+  }
 
   return (
     <motion.div
@@ -51,23 +67,43 @@ function MainMenu({ onStartGame }) {
         </motion.button>
 
         <div className="mt-8 pt-6 border-t border-white/20">
-          <h3 className="text-lg font-bold text-white mb-2">Quick Info</h3>
-          <ul className="text-sm text-white/80 space-y-1">
-            <li>• 3 Rounds + Fast Money</li>
-            <li>• First to 500 points wins</li>
-            <li>• Host controls via keyboard</li>
-            <li>• Press ESC anytime for controls</li>
-          </ul>
+          <button
+            onClick={toggleQuickInfo}
+            className="flex items-center justify-between w-full text-left group hover:opacity-80 transition-opacity"
+            aria-expanded={showQuickInfo}
+            aria-controls="quick-info-content"
+          >
+            <h3 className="text-lg font-bold text-white">Quick Info</h3>
+            <motion.svg
+              animate={{ rotate: showQuickInfo ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-5 h-5 text-white/60 group-hover:text-white/80"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </motion.svg>
+          </button>
+          <AnimatePresence initial={false}>
+            {showQuickInfo && (
+              <motion.ul
+                id="quick-info-content"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="text-sm text-white/80 space-y-1 overflow-hidden"
+                style={{ marginTop: '0.5rem' }}
+              >
+                <li>• 3 Rounds + Fast Money</li>
+                <li>• First to 500 points wins</li>
+                <li>• Host controls via keyboard</li>
+                <li>• Press ESC anytime for controls</li>
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="mt-8 text-center text-white/60 text-sm"
-      >
-        <p>Press <kbd className="px-2 py-1 bg-white/20 rounded">ESC</kbd> during game to view host controls</p>
       </motion.div>
     </motion.div>
   )
