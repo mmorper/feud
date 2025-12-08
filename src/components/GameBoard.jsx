@@ -11,6 +11,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
   const [roundPoints, setRoundPoints] = useState(0)
   const [answers, setAnswers] = useState([])
   const [showControls, setShowControls] = useState(true) // Show/hide host controls
+  const [round3StartScores, setRound3StartScores] = useState(null) // Track scores at start of round 3
 
   // Sound effects
   const { playSound } = useSounds()
@@ -29,6 +30,13 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
       setRoundPoints(0)
     }
   }, [currentRound, currentQuestion, gameData])
+
+  // Capture scores at the start of round 3 for tie-breaker logic
+  useEffect(() => {
+    if (currentRound === 2 && currentQuestion === 0 && round3StartScores === null) {
+      setRound3StartScores({ team1: scores.team1, team2: scores.team2 })
+    }
+  }, [currentRound, currentQuestion, scores, round3StartScores])
 
   // Check for win condition after score updates
   useEffect(() => {
@@ -161,12 +169,29 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
     if (currentQuestion < currentRoundData.questions.length - 1) {
       // Move to next question in current round
       setCurrentQuestion(currentQuestion + 1)
-    } else if (currentRound < gameData.rounds.length - 1) {
-      // Move to next round
+    } else if (currentRound === 2) {
+      // End of round 3 - game over (with tie-breaker if needed)
+      // If scores are tied, determine winner by who scored more in round 3
+      if (scores.team1 === scores.team2 && round3StartScores) {
+        const team1Round3Points = scores.team1 - round3StartScores.team1
+        const team2Round3Points = scores.team2 - round3StartScores.team2
+
+        // Award tie-breaker point to round 3 winner
+        if (team1Round3Points > team2Round3Points) {
+          setScores(prev => ({ ...prev, team1: prev.team1 + 1 }))
+        } else if (team2Round3Points > team1Round3Points) {
+          setScores(prev => ({ ...prev, team2: prev.team2 + 1 }))
+        }
+        // If still tied (both scored same in round 3), let scores remain tied
+      }
+      // Delay to allow tie-breaker point animation, then end game
+      setTimeout(() => onGameEnd(), 500)
+    } else if (currentRound < 2) {
+      // Move to next round (only rounds 0->1 or 1->2)
       setCurrentRound(currentRound + 1)
       setCurrentQuestion(0)
     } else {
-      // Game over - all rounds complete
+      // Fallback - shouldn't reach here, but end game anyway
       onGameEnd()
     }
   }

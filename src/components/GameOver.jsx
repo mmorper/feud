@@ -4,7 +4,8 @@ import Confetti from './Confetti'
 import virtruLogo from '../assets/imgs/virtru_logo_w.svg'
 
 function GameOver({ teams, scores, onPlayAgain }) {
-  const winner = scores.team1 > scores.team2 ? teams.team1 : teams.team2
+  const isTie = scores.team1 === scores.team2
+  const winner = isTie ? 'TIE GAME' : (scores.team1 > scores.team2 ? teams.team1 : teams.team2)
   const winningScore = Math.max(scores.team1, scores.team2)
   const losingScore = Math.min(scores.team1, scores.team2)
   const buttonRef = useRef(null)
@@ -31,7 +32,7 @@ function GameOver({ teams, scores, onPlayAgain }) {
         className="mb-12"
       >
         <h1 className="text-8xl font-game text-feud-gold mb-4 text-center animate-pulse">
-          WINNER!
+          {isTie ? 'TIE GAME!' : 'WINNER!'}
         </h1>
       </motion.div>
 
