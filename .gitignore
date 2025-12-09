@@ -14,6 +14,7 @@ dist-ssr
 
 # Proprietary documents
 *.pdf
+source-virtru*.md
 
 # Editor directories and files
 .vscode/*
