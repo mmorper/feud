@@ -1,9 +1,12 @@
 # How to Use the AI Prompt System
 
-This guide explains how to use the three AI system prompts for creating Family Feud content:
+This guide explains how to use the four AI system prompts for creating Family Feud content:
 1. **Game File Generator** - Creates game questions and answers
 2. **Host Sheet Generator** - Transforms game files into print-friendly host answer sheets
 3. **Blend Games** - Intelligently combines 2-3 existing game files into one cohesive game
+4. **Game Quality Analyzer** - Evaluates game balance, difficulty, and quality with scoring
+
+**Bonus:** `format-reference.md` - Quick reference cheat sheet for game file format (not a prompt)
 
 ## Setup
 
@@ -508,10 +511,11 @@ Have multiple game files and want to combine the best questions from each into o
 
 Use the same setup process as the Game Generator and Host Sheet Generator, but paste the contents of `blend-games.md` instead.
 
-**Pro tip:** Set up all three prompts as separate Claude Projects or Custom GPTs:
+**Pro tip:** Set up all four prompts as separate Claude Projects or Custom GPTs:
 - "Family Feud Game Creator" (game-generator.md)
 - "Family Feud Host Sheet Maker" (host-sheet-generator.md)
 - "Family Feud Game Blender" (blend-games.md)
+- "Family Feud Game Analyzer" (game-quality-analyzer.md)
 
 ---
 
