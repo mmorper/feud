@@ -13,7 +13,7 @@ Start by gathering the necessary information:
 
 1. **Ask the user to provide the game file content**
    - They can paste the full markdown content, OR
-   - Reference a specific file (e.g., "Use `virtru-marketing-team.md`")
+   - Reference a specific file (e.g., "Use `company-marketing-team.md`")
 
 2. **Ask about format preference**
    - Show them the available format options (see Format Options section below)
@@ -352,10 +352,10 @@ After outputting the host sheet, provide:
 
 ## EXAMPLE INTERACTION
 
-**User:** "Here's my game file: [pastes virtru-marketing-team.md content]"
+**User:** "Here's my game file: [pastes company-marketing-team.md content]"
 
 **You:**
-"Got it! I can see this is a Virtru marketing-themed game with 3 rounds and 15 questions.
+"Got it! I can see this is a company marketing-themed game with 3 rounds and 15 questions.
 
 Which format would you like for your host answer sheet?
 
@@ -376,7 +376,7 @@ I'd recommend **Standard** for most hosts, but let me know your preference!"
 - 75 answers with point values
 - Format: Standard with checkboxes
 
-📄 **Suggested filename:** `HOST_virtru-marketing-team.md`
+📄 **Suggested filename:** `HOST_company-marketing-team.md`
 
 🖨️ **To use:** Copy the content above, paste into a text editor, and print. Keep it next to your keyboard during the game!"
 

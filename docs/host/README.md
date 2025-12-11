@@ -33,7 +33,7 @@ Every game can be converted into three different host sheet formats:
 - No extra whitespace or tracking elements
 - Fits on 1-2 pages
 
-**Example:** See `HOST_virtru-marketing-team_MINIMAL.md`
+**Example:** See `HOST_company-marketing-team_MINIMAL.md`
 
 ---
 
@@ -51,7 +51,7 @@ Every game can be converted into three different host sheet formats:
 - Vertical answer layout for easy scanning
 - Fits on 2-3 pages
 
-**Example:** See `HOST_virtru-marketing-team_STANDARD.md`
+**Example:** See `HOST_company-marketing-team_STANDARD.md`
 
 ---
 
@@ -71,7 +71,7 @@ Every game can be converted into three different host sheet formats:
 - Hosting tips at bottom
 - Fits on 3-4 pages
 
-**Example:** See `HOST_virtru-marketing-team_DETAILED.md`
+**Example:** See `HOST_company-marketing-team_DETAILED.md`
 
 ---
 
@@ -126,9 +126,9 @@ HOST_[game-name]_[FORMAT].md
 ```
 
 **Examples:**
-- `HOST_virtru-marketing-team_MINIMAL.md`
-- `HOST_virtru-marketing-team_STANDARD.md`
-- `HOST_virtru-marketing-team_DETAILED.md`
+- `HOST_company-marketing-team_MINIMAL.md`
+- `HOST_company-marketing-team_STANDARD.md`
+- `HOST_company-marketing-team_DETAILED.md`
 - `HOST_christmas-special_STANDARD.md`
 - `HOST_company-culture_DETAILED.md`
 
@@ -141,13 +141,13 @@ This makes it easy to:
 
 ## Example Files in This Directory
 
-This folder includes three example host sheets generated from `virtru-marketing-team.md`:
+Generate your own host sheets using the AI generator (see instructions above) from any game file. The three format styles are:
 
-- **`HOST_virtru-marketing-team_MINIMAL.md`** - Compact one-page style
-- **`HOST_virtru-marketing-team_STANDARD.md`** - Recommended balanced format
-- **`HOST_virtru-marketing-team_DETAILED.md`** - Full hosting guide with tips
+- **MINIMAL** - Compact one-page style
+- **STANDARD** - Recommended balanced format
+- **DETAILED** - Full hosting guide with tips
 
-**Compare all three** to see which format works best for your hosting style!
+**Try generating all three formats** from your game to see which works best for your hosting style!
 
 ---
 

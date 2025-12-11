@@ -1,7 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Confetti from './Confetti'
-import virtruLogo from '../assets/imgs/virtru_logo_w.svg'
 
 function GameOver({ teams, scores, onPlayAgain }) {
   const isTie = scores.team1 === scores.team2
@@ -9,6 +8,7 @@ function GameOver({ teams, scores, onPlayAgain }) {
   const winningScore = Math.max(scores.team1, scores.team2)
   const losingScore = Math.min(scores.team1, scores.team2)
   const buttonRef = useRef(null)
+  const [logoVisible, setLogoVisible] = useState(true)
 
   // Auto-focus the Play Again button when component mounts
   useEffect(() => {
@@ -81,14 +81,17 @@ function GameOver({ teams, scores, onPlayAgain }) {
         <p className="text-white/60 text-lg mb-4">
           Made by Marketers with Zero Coding Skills
         </p>
-        <motion.img
-          src={virtruLogo}
-          alt="Virtru"
-          className="mx-auto opacity-85"
-          style={{ width: '90px', height: 'auto' }}
-          whileHover={{ opacity: 1, scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-        />
+        {logoVisible && (
+          <motion.img
+            src="/logo.svg"
+            alt="Logo"
+            className="mx-auto opacity-85"
+            style={{ width: '90px', height: 'auto' }}
+            whileHover={{ opacity: 1, scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+            onError={() => setLogoVisible(false)}
+          />
+        )}
       </motion.div>
     </motion.div>
   )

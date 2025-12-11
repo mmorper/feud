@@ -15,6 +15,11 @@ dist-ssr
 # Proprietary documents
 *.pdf
 source-virtru*.md
+Game_Questions/virtru-*.md
+
+# Custom branding (optional)
+public/logo.svg
+public/logo.png
 
 # Editor directories and files
 .vscode/*

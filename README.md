@@ -24,7 +24,7 @@ Forget trust falls. Create custom games that test product knowledge, celebrate c
 Here's the magic: **Unlimited game files in simple markdown format**. Create as many themed games as you want:
 - "Cybersecurity Fails 101" for your security team
 - "Sales Objections: The Game" for your GTM org
-- "Virtru Product Trivia" for SKO 2026
+- "Product Knowledge Challenge" for your next sales kickoff
 - "Remote Work Struggles" for Friday team bonding
 
 **And for the tech-savvy teams?** We built an **AI-powered game generator** (yes, really). Feed it a theme, and Claude/ChatGPT will create survey-style questions with realistic answers and point distributions. Built by marketers with zero coding skills, powered by modern AI. *You're welcome.*
@@ -59,6 +59,24 @@ One person controls everything via keyboard shortcuts. No clicking, no lag, no "
 - Phase-based workflow with automatic format validation
 - Works everywhere: Claude Code, Claude.ai, ChatGPT, n8n
 - See `/prompts/` for the full AI toolkit
+
+---
+
+## 🎨 Custom Branding (Optional)
+
+Want to add your company logo to the game-over screen?
+
+1. Create a file named `logo.svg`
+2. Place it in the `/public/` folder
+3. Restart the dev server
+
+**That's it!** Your logo will appear on the final screen after each game. If no logo is present, the game works perfectly without it.
+
+**Logo specs:**
+- **Format:** SVG (recommended) or PNG
+- **Filename:** Must be exactly `logo.svg`
+- **Size:** ~100px width recommended
+- **Color:** Light/white works best on the dark background
 
 ---
 

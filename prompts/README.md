@@ -228,7 +228,7 @@ This way you can easily switch between creating games and generating host sheets
 
 1. **Provide your game file content**
    - Copy the entire contents of your game .md file
-   - Or tell the AI: "Use the file virtru-marketing-team.md" (if you've uploaded it)
+   - Or tell the AI: "Use the file company-marketing-team.md" (if you've uploaded it)
 
 2. **Choose a format style:**
    - **MINIMAL** - Ultra-compact, one page, answers on same line
@@ -242,9 +242,9 @@ This way you can easily switch between creating games and generating host sheets
 
 ### Example Conversation Flow
 
-**You:** "Here's my game file: [paste entire virtru-marketing-team.md content]"
+**You:** "Here's my game file: [paste entire company-marketing-team.md content]"
 
-**AI:** "Got it! I can see this is a Virtru marketing-themed game with 3 rounds and 14 questions. Which format would you like? 1) MINIMAL, 2) STANDARD, or 3) DETAILED?"
+**AI:** "Got it! I can see this is a company marketing-themed game with 3 rounds and 14 questions. Which format would you like? 1) MINIMAL, 2) STANDARD, or 3) DETAILED?"
 
 **You:** "Standard format please"
 
@@ -403,7 +403,7 @@ You can ask for modifications:
 ### Recommended File Structure:
 ```
 /docs/host/
-├── HOST_virtru-marketing-team_STANDARD.md
+├── HOST_company-marketing-team_STANDARD.md
 ├── HOST_christmas-special_DETAILED.md
 ├── HOST_product-launch_MINIMAL.md
 ```
@@ -558,7 +558,7 @@ Use the same setup process as the Game Generator and Host Sheet Generator, but p
 
 ## Example Conversation Flow
 
-**You:** "I want to blend two games: virtru-marketing-team.md and virtru-saas-metrics-2026-budget.md"
+**You:** "I want to blend two games: company-marketing-team.md and company-saas-metrics-2026-budget.md"
 
 **AI:** "Got it! Please paste the full content of both game files, or confirm you'd like me to work with those specific files if I have access."
 
@@ -568,7 +568,7 @@ Use the same setup process as the Game Generator and Host Sheet Generator, but p
 - **Marketing Team:** 13 questions, fun/lighthearted, team trivia
 - **SaaS Metrics Budget:** 15 questions, serious/business, metrics-focused
 
-**Suggested title:** 'Virtru Marketing Team & Budget Edition'
+**Suggested title:** 'Company Marketing Team & Budget Edition'
 **Blend strategy:** 50/50 split, 7-8 questions from each
 
 Sound good, or would you like to adjust anything?"
@@ -635,7 +635,7 @@ C) Merge both (combine answers)
 The AI validates that blended games have consistent tone:
 
 **High coherence:** No warning needed
-- Example: Blending "Virtru Marketing Team" + "Virtru Budget Metrics" (both Virtru-focused)
+- Example: Blending "Marketing Team" + "Budget Metrics" (both company-focused)
 
 **Low coherence:** Warning issued
 ```
@@ -741,7 +741,7 @@ During Phase 3, you can request:
    - "Blended from [Game A] (8 questions) and [Game B] (7 questions)"
    - "Blend ratio: 53/47 (approximately 50/50 requested)"
 4. **Suggested filename**
-   - Based on title (e.g., `virtru-blended-edition.md`)
+   - Based on title (e.g., `company-blended-edition.md`)
 5. **Usage instructions**
    - Where to save, how to load in game
 
@@ -932,7 +932,7 @@ Use the same setup process, but paste the contents of `game-quality-analyzer.md`
 
 ### Example Conversation Flow
 
-**You:** "Analyze this game file: [paste virtru-marketing-game-1.md]"
+**You:** "Analyze this game file: [paste company-marketing-game-1.md]"
 
 **AI:** "Got it! This game has 3 rounds with 13 questions. Would you like:
 1. Full analysis (all frameworks)
@@ -967,7 +967,7 @@ Change distribution from 80-15-5 to 50-30-20 for better gameplay balance."
 ### 2. Accessibility Scoring
 Each question categorized as:
 - **Universal (3 pts):** Anyone can reasonably guess (e.g., "Name a paid advertising channel")
-- **Moderate (2 pts):** Requires some domain knowledge (e.g., "Name a martech tool in Virtru's stack")
+- **Moderate (2 pts):** Requires some domain knowledge (e.g., "Name a martech tool in your company's stack")
 - **Insider (1 pt):** Requires specific insider knowledge (e.g., "Name something Matt Howard does on vacation")
 
 **Game Accessibility Score:** Average across all questions

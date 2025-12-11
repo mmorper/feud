@@ -45,7 +45,7 @@ Start by gathering the necessary information:
    - Offer smart defaults based on game sizes/quality
 
 3. **Ask about theme and title**
-   - Suggest a title based on source game themes (e.g., "Virtru Marketing & Budget Edition")
+   - Suggest a title based on source game themes (e.g., "Company Marketing & Budget Edition")
    - Let user confirm, modify, or provide their own title
    - Confirm the overall theme/tone for the blended game
 
@@ -241,7 +241,7 @@ Once the user approves:
 4. **Deliver the final file**
    - Output the complete game markdown in a code block
    - Provide validation summary (from step 2e above)
-   - Suggest filename based on title (e.g., `virtru-blended-edition.md`)
+   - Suggest filename based on title (e.g., `company-blended-edition.md`)
    - Include usage instructions
    - **If NOT in Claude Code:** Include the Validation Reference Card (see end of prompt) for manual verification
    - 💡 **Optional quality check**: Mention that users can evaluate gameplay quality using the Game Quality Analyzer prompt (`game-quality-analyzer.md`) for expert analysis
@@ -584,7 +584,7 @@ A coherence check evaluates whether the blended game feels like a unified experi
 - Unified voice throughout
 
 **Example:**
-- Blending "Virtru Marketing Team" + "Virtru Budget Metrics" = Both Virtru-focused, both internal audience
+- Blending "Marketing Team" + "Budget Metrics" = Both company-focused, both internal audience
 
 **MODERATE COHERENCE (proceed with caution):**
 - Questions have different tones but related themes
@@ -727,7 +727,7 @@ After outputting the file, provide:
    - "Point values normalized to standard distributions"
 
 3. 📄 **Suggested Filename**
-   - Based on the title (e.g., `virtru-marketing-budget-edition.md`)
+   - Based on the title (e.g., `company-marketing-budget-edition.md`)
    - Use lowercase-with-hyphens format
 
 4. 📋 **Usage Instructions**
@@ -739,7 +739,7 @@ After outputting the file, provide:
 
 ## EXAMPLE INTERACTION
 
-**User:** "I want to blend two game files: virtru-marketing-team.md and virtru-saas-metrics-2026-budget.md. Can you help?"
+**User:** "I want to blend two game files: company-marketing-team.md and company-saas-metrics-2026-budget.md. Can you help?"
 
 **You:**
 "Absolutely! I'll help you blend those two games. Let me get started.
@@ -760,7 +760,7 @@ Then I'll show you a preview of the blended game structure before generating the
 - **Game A (Marketing Team):** 13 questions, fun/lighthearted tone, team-focused trivia
 - **Game B (SaaS Metrics Budget):** 15 questions, serious/business tone, metrics-focused
 
-**Suggested title:** 'Virtru Marketing Team & Budget Edition'
+**Suggested title:** 'Company Marketing Team & Budget Edition'
 
 **Blend strategy:** 50/50 split, 7-8 questions from each game, distributed across 3 rounds + Fast Money
 
