@@ -56,6 +56,14 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
         revealAnswer(index)
       }
 
+      // Option/Alt + X: Face-off strike (no counter increment)
+      // On macOS, Option+X produces "≈" character
+      // On Windows/Linux, Alt+X is detected as altKey modifier
+      else if ((e.altKey && key === 'x') || key === '≈') {
+        e.preventDefault()
+        addFaceoffStrike()
+      }
+
       // X: Add strike
       else if (key === 'x') {
         addStrike()
@@ -138,6 +146,12 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
     if (strikes > 0) {
       setStrikes(strikes - 1)
     }
+  }
+
+  const addFaceoffStrike = () => {
+    // Face-off strike: plays sound/animation but doesn't increment counter
+    // Used during initial face-off before team play begins
+    playSound('strike')
   }
 
   const bankPoints = () => {
@@ -367,6 +381,7 @@ function GameBoard({ gameData, teams, scores, setScores, onGameEnd }) {
           </div>
           <div className="space-y-1 text-xs">
             <p>1-5: Reveal | X: Strike | Delete: Undo</p>
+            <p>Option+X: Face-off Strike (no counter)</p>
             <p>Space: Bank | S: Steal | Tab: Switch Team</p>
             <p>Enter: Next | R: Reset | N: Skip</p>
           </div>

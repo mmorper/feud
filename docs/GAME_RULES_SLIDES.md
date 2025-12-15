@@ -37,6 +37,7 @@ Shout out answers. Celebrate reveals. Roast bad guesses. Trash talk encouraged. 
 #### **Core Controls** (You'll Use These Constantly)
 - **`1` `2` `3` `4` `5`** → Reveal answers in order
 - **`X`** → Add a strike (3 strikes = team switch)
+- **`Option+X`** → Face-off strike (wrong answer during face-off, no counter)
 - **`Spacebar`** → Bank points to the active team
 - **`S`** → Steal! Award points to the other team
 - **`Enter`** → Move to next question/round
@@ -44,11 +45,12 @@ Shout out answers. Celebrate reveals. Roast bad guesses. Trash talk encouraged. 
 
 #### **The Host Flow**
 1. Teams face off → You decide who guesses first (manual, use your judgment)
+   - **During face-off:** Wrong answer? Use `Option+X` (sound effect, no strike counter)
+   - **During team play:** Wrong answer? Use `X` (counts toward 3-strike limit)
 2. Team calls out answers → Press `1-5` to reveal matches
-3. Wrong answer? → Hit `X` to add a strike
-4. All answers revealed OR 3 strikes? → Press `Spacebar` to bank points
-5. Team struck out? → Other team gets a steal attempt → Press `S` if they get it right
-6. Press `Enter` → Next question begins
+3. All answers revealed OR 3 strikes? → Press `Spacebar` to bank points
+4. Team struck out? → Other team gets a steal attempt → Press `S` if they get it right
+5. Press `Enter` → Next question begins
 
 #### **Pro Tips**
 - **No mouse needed.** Your hands never leave the keyboard.

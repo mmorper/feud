@@ -181,6 +181,7 @@ The magic is in the keyboard controls. One person (the host) runs the entire sho
 ### The Essentials
 - **`1-5`** → Reveal answers (the bread and butter)
 - **`X`** → Add a strike (3 strikes = team switch)
+- **`Option+X`** → Face-off strike (wrong answer during face-off, no counter increment)
 - **`Spacebar`** → Bank points to the active team
 - **`S`** → Steal points for the other team
 - **`Enter`** → Next question/round
@@ -188,8 +189,10 @@ The magic is in the keyboard controls. One person (the host) runs the entire sho
 
 ### The Flow
 1. Teams face off (manually managed – you decide who controls the board)
+   - During face-off: Use `Option+X` for wrong answers (plays sound without counting strikes)
+   - This ensures teams start with a clean slate once play begins
 2. Host reveals answers as teams guess
-3. Wrong answers? Hit `X` for strikes
+3. Wrong answers during team play? Hit `X` for strikes
 4. After 3 strikes or all answers revealed, bank points with `Spacebar`
 5. Hit `Enter` to move to the next question
 6. First to 500 points wins (or highest score after 3 rounds)
