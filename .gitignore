@@ -17,6 +17,9 @@ dist-ssr
 source-virtru*.md
 Game_Questions/virtru-*.md
 
+# Temporary working directories
+docs/temp/
+
 # Custom branding (optional)
 public/logo.svg
 public/logo.png
