@@ -4,6 +4,8 @@
 
 **Welcome to Virgil Feud** – the browser-based Family Feud experience that turns any corporate gathering into an unforgettable competition.
 
+🎮 **[Play the live demo →](https://feud.morperhaus.org)**
+
 ![Virgil Feud Gameplay](./docs/screenshot.gif)
 *Watch teams race to 500 points with questions tailored to YOUR company*
 
@@ -286,8 +288,11 @@ Everything runs in the user's browser. The game files? Just static HTML, CSS, an
 
 **Where can you host it?**
 
+**Want to see it in action first?** Check out our live demo: **[feud.morperhaus.org](https://feud.morperhaus.org)**
+
 The beauty of this architecture? You can stick it anywhere that serves web pages:
 
+- **Cloudflare Pages** (what we use for the live demo – auto-deploys from GitHub)
 - **Your company's website** (if you have access – ask your web team)
 - **Netlify** (drag & drop the folder, get a URL – tell your dev friends you "deployed to Netlify" and watch them nod approvingly)
 - **GitHub Pages** (free hosting from GitHub – makes you look extra technical)
